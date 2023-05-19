@@ -1,0 +1,296 @@
+@use "../abstract/fonts";
+@use "../abstract/colors" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+
+.hero{
+    background-image: url("../../../app//assets/img/home/hero-img.webp");
+    @include background-cover;
+    height: rem(421);
+    padding: 0;
+    position: relative;
+    padding-top:em(80);
+
+    @include breakpoint-md{
+        padding-top:em(142);
+        height: rem(721);
+    }
+    @include breakpoint-lg{
+        padding-top:em(142);
+        height: rem(721);
+    }
+    // &::before{
+    //     content:"";
+    //     position:absolute;
+    //     inset:0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0,0,0,0.3);
+    // }
+
+    &__heading {
+        font-family:"Unbounded bold";
+    }
+    &__btn{
+        border:1px solid $clr-white;
+
+        &:hover{
+           color: $clr-white;
+        }
+    }
+}
+
+.video{
+  
+    &__container{
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__desc{
+        font-size: clamp(1.375rem, 6vw + 1rem, 1.75rem);
+        line-height: 1.57;
+        text-align: center;
+    }
+    &__controls{
+        width: rem(109);
+        height: rem(109);
+        background-color: $clr-white;
+        @include border-radius(50%);
+    }
+}
+
+.service{
+
+    &__descWrapper{
+        padding: em(100) 0 em(100) em(100);
+    }
+    &__title{
+        font-weight: 800;
+        font-size: rem(24);
+    }
+}
+
+.rolfing{
+    background-image: url("../../../app/assets/img/home/rolfing-1.png");
+    @include background-cover;
+
+    &__rightContainer{
+        background-image: url("../../../app/assets/img/home/rolfing-bg.webp");
+        @include background-cover;
+        row-gap:em(48);
+
+        @include breakpoint-md{
+            row-gap:em(68);
+        }
+    }
+    &__desc{
+        line-height: 1.75;
+    }
+}
+
+.testimonial{
+
+    &__thumbnail-wrapper{
+        @include flex-center;
+        flex-direction: column;
+
+        @include breakpoint-lg{
+            flex-direction: row;
+            column-gap: 2.5rem;
+        }
+    }
+    &__thumbnail{
+        @include border-radius(50%);
+    }
+    &__name-wrapper{
+        @include flex-column;
+        align-items: flex-start;
+
+    }
+    &__patient-name{
+        font-family:"Unbounded";
+    }
+    &__desc{
+        font-size: rem(20);
+    }
+
+    &__thumbnail{
+      width: rem(120);
+      height: rem(120);
+      border:2px solid $clr-primary;
+      background-color:$clr-white;
+      @include border-radius(50%);
+
+      @include breakpoint-md{
+        width: rem(150);
+        height: rem(150);
+      }
+
+    }
+}
+
+.arrow{
+    @include flex-center;
+    gap: rem(32);
+
+    &__common{
+        width: rem(60);
+        height: rem(60);
+        padding: em(19) em(16);
+        border:2px solid $clr-primary;
+        background-color: $clr-white;
+        @include border-radius(50%);
+        @include transition(all, 0.35s, ease-in-out);
+
+        &:hover{
+            background-color:$clr-primary;
+            cursor: pointer;
+    
+            .arrow__svg--path{
+                fill:$clr-white;
+            }
+        }
+    }
+}
+
+.FAQs{
+    background-image: url("../../../app/assets/img/home/retirementdcare_hero.webp");
+    @include background-cover;
+    padding: em(230) em(0) em(180) em(0);
+
+    @include breakpoint-md{
+        padding: em(251) em(0) em(212) em(0);
+    }
+    @include breakpoint-md{
+        padding: em(281) em(0) em(242) em(0);
+    }
+
+    &__summary{
+        font-size: rem(20);
+        font-weight: bold;
+    }
+}
+
+// Accordian start
+.accordian{
+
+    &__label{
+        color:$clr-white;
+        font-size:rem(20); 
+        line-height: rem(24);
+        font-family:"Unbounded bold";
+        font-weight: 800 !important;
+        position:relative;
+        display: block;
+        // padding: em(12) em(0) em(20) em(0);
+        padding-block: em(30);
+        cursor: pointer;
+
+        &::after{
+            content:"\f078";
+            font-family: fontawesome;
+            position:absolute;
+            // top: rem(13);
+            right: rem(14);
+            @include transition(transform, 0.4s);
+        }
+    }
+    &__content{
+        max-height: 0;
+        @include transition(all, 0.4s);
+        overflow: hidden;
+        color:$clr-white;
+
+        p{
+            padding: em(20) em(20) em(20) em(0);
+        }
+    }
+    &__divider{
+        height: 1px;
+        background-color: $clr-white;
+    }
+    &__toggle{
+        display: none;
+
+        // &:checked{
+
+        //     .accordian__content {
+        //         max-height: 100vh;
+        //     }
+
+        //     .accordian__label::after{
+        //         transform:rotate(180deg);
+        //         @include transition(all, 0.4s);
+        //     }
+
+        // }
+    }
+}
+
+.accordian__toggle:checked ~ .accordian__content{
+    max-height: 100vh;
+}
+.accordian__toggle:checked ~ .accordian__label::after{
+    transform:rotate(180deg);
+    @include transition(all, 0.4s);
+}
+// Accordian end
+
+.form{
+
+    &__group{
+        max-width:100%;
+        height: rem(59);
+        padding-inline:em(20);
+        margin-bottom: rem(16);
+        background-color: $clr-white;
+        @include flex-center-vertical;
+        gap:2rem;
+
+        @include breakpoint-md{
+            padding-inline:em(40);
+            height: rem(59);
+        }
+        @include breakpoint-lg{
+            padding-inline:em(54);
+            height: rem(69);
+        }
+
+        &.isBorder{
+            border:2px solid $clr-secondary;
+        }
+    
+    }
+    &__control{
+        width: 100%;
+        height: 100%;
+        border:none;
+        outline:none;
+
+        &::placeholder{
+            font-size: rem(16);
+            font-family:"FutuBK";
+        }
+    }
+    &__textarea{
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        resize:none;
+
+        &::placeholder{
+            content:"Note";
+        }
+    }
+    &__textarea--wrapper{
+        height: rem(164) !important;
+    }
+
+}
+
+
+

@@ -1,0 +1,92 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+.footer{
+    padding-top: em(70);
+    padding-bottom: em(60);
+    background-color: $clr-primary;
+
+    @include breakpoint-md{
+        padding-top: em(90);
+        padding-bottom: em(80);
+    }
+
+    &__grid{
+        display: grid;
+        grid-gap:1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    &__logoWrapper{
+        @include flex-column;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: rem(287);
+        height:rem(104);
+    }
+    &__link , &__address{
+        font-size: rem(18);
+        color:$clr-white;
+        line-height: rem(36);
+    }
+    &__address{
+        width: rem(210);
+        margin-top: rem(40);
+    }
+
+    &__privacy{
+        @include flex-center-vertical;
+        justify-content:space-between;
+        flex-wrap:wrap;
+
+        &__item{
+            color:$clr-white;
+            font-size: rem(16);
+
+            &--right{
+                display: flex;
+                gap:1rem;
+            }
+        }
+    }
+}
+
+.horizontal-line{
+    height: 2px;
+    margin: rem(56) 0 rem(28);
+    object-fit: contain;
+    background-color: $clr-white;
+
+    @include breakpoint-md{
+        margin: rem(69) 0 rem(37);
+    }
+}
+
+.social{
+     @include flex-center-vertical;
+    gap:2rem;
+
+    &__item{
+        width: rem(46);
+        height: rem(46);
+        line-height: 40px;
+        background-color: $clr-white;
+        @include border-radius(50%);
+        @include flex-center;
+        @include transition(all, 0.4s, ease-in-out);
+
+        &:hover{
+            background:$clr-secondary;
+            cursor:pointer;
+
+            .social__svg-path{
+                fill:$clr-white;
+            }
+
+        }
+    }
+}
