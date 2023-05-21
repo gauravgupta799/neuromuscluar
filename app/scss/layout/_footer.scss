@@ -28,6 +28,11 @@
         width: rem(287);
         height:rem(104);
     }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
     &__link , &__address{
         font-size: rem(18);
         color:$clr-white;
@@ -35,7 +40,7 @@
     }
     &__address{
         width: rem(210);
-        margin-top: rem(40);
+        margin-top: rem(15);
     }
 
     &__privacy{

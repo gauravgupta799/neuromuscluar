@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/39784cd2b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="dist/bundle.min.css">
     <link rel="shortcut icon" href="./app/assets/logos/main-logo.webp" type="image/x-icon" />
     <title>Neuromuscular | Home Page </title>
 </head>
     <body class="body">
+    <!-- Header start -->
         <header class="header">
             <div class="header-wrapper--desktop">
                 <div class="page-container">
@@ -44,8 +46,10 @@
                </div>
             </div>
         </header>
+    <!-- Header end -->
         <div class="overlay"></div>
 
+    <!-- Main start -->
         <main>
             <section class="hero">
                 <div class="page-container">
@@ -151,17 +155,17 @@
             <!-- rolfing start -->
             <section class="rolfing mt-10 mt-md-15 mt-lg-20">
                 <div class="row g-0">
-                    <div class="col-md-12 col-lg-6">
-                        <!-- <img src="./app/assets/img/home/rolfing-1.png" alt="" class="img-fluid" > -->
+                    <div class="col-md-12 col-lg-6 rolfing__imgWrapper">
+                        <img src="./app/assets/img/home/rolfing-1.png" alt="" class="img-fluid" >
                     </div>
-                    <div class="col-md-12 col-lg-6 px-2 px-md-4 px-lg-6
-                    py-5 py-md-7 py-lg-9 d-flex flex-column justify-content-around 
+                    <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-around 
+                    px-2 px-md-4 px-lg-7 py-5 py-md-7 py-lg-9 
                     rolfing__rightContainer">
                         <div class="row g-0 d-flex align-items-center justify-content-center">
                             <div class="col-lg-5">
                                 <h2 class="text-center text-white">12+</h2>
                             </div>
-                            <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center">                  
+                            <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center mt-md-1 mt-lg-0">                  
                                 <span class="text-white rolfing__desc">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
                                 </span>
@@ -232,36 +236,97 @@
                             <h4 class="text-primary text-capitalize col-md-6">
                                 Words From Our Satisfied Customers
                             </h4>
-                        </div>
-                       <div class="d-flex align-items-center justify-content-center mt-3 mt-lg-5">
-                            <p class="col-md-5 testimonial__desc text-capitalize">
-                                “The Lorem Ipsum Company has been an integral part of 
-                                our content marketing success. We have seen a notable 
-                                increase in organic leads since
-                            </p>
-                       </div>
-                        <div class="testimonial__thumbnail-wrapper mt-4">
-                            <div class="testimonial__thumbnail">
-                                <img src="" alt="">
+                        </div>  
+                        <div class="swiper swiper-container">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="d-flex align-items-center justify-content-center mt-3 mt-lg-5">
+                                                <p class="col-md-5 testimonial__desc text-capitalize">
+                                                    “The Lorem Ipsum Company has been an integral part of 
+                                                    our content marketing success. We have seen a notable 
+                                                    increase in organic leads since-1
+                                                </p>
+                                        </div>
+                                            <div class="testimonial__thumbnail-wrapper mt-4">
+                                                <div class="testimonial__thumbnail">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div class="testimonial__name-wrapper mt-3 ">
+                                                    <p class="testimonial__patient-name m-0">John Doe</p>
+                                                    <p class="testimonial__patient-type m-lg-0 m-auto">Patient</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="d-flex align-items-center justify-content-center mt-3 mt-lg-5">
+                                                <p class="col-md-5 testimonial__desc text-capitalize">
+                                                    “The Lorem Ipsum Company has been an integral part of 
+                                                    our content marketing success. We have seen a notable 
+                                                    increase in organic leads since-2
+                                                </p>
+                                        </div>
+                                            <div class="testimonial__thumbnail-wrapper mt-4">
+                                                <div class="testimonial__thumbnail">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div class="testimonial__name-wrapper mt-3 ">
+                                                    <p class="testimonial__patient-name m-0">John Doe</p>
+                                                    <p class="testimonial__patient-type m-lg-0 m-auto">Patient</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="d-flex align-items-center justify-content-center mt-3 mt-lg-5">
+                                                <p class="col-md-5 testimonial__desc text-capitalize">
+                                                    “The Lorem Ipsum Company has been an integral part of 
+                                                    our content marketing success. We have seen a notable 
+                                                    increase in organic leads since-3
+                                                </p>
+                                        </div>
+                                            <div class="testimonial__thumbnail-wrapper mt-4">
+                                                <div class="testimonial__thumbnail">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div class="testimonial__name-wrapper mt-3 ">
+                                                    <p class="testimonial__patient-name m-0">John Doe</p>
+                                                    <p class="testimonial__patient-type m-lg-0 m-auto">Patient</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="d-flex align-items-center justify-content-center mt-3 mt-lg-5">
+                                                <p class="col-md-5 testimonial__desc text-capitalize">
+                                                    “The Lorem Ipsum Company has been an integral part of 
+                                                    our content marketing success. We have seen a notable 
+                                                    increase in organic leads since-4
+                                                </p>
+                                        </div>
+                                            <div class="testimonial__thumbnail-wrapper mt-4">
+                                                <div class="testimonial__thumbnail">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div class="testimonial__name-wrapper mt-3 ">
+                                                    <p class="testimonial__patient-name m-0">John Doe</p>
+                                                    <p class="testimonial__patient-type m-lg-0 m-auto">Patient</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="arrow d-flex align-items-center justify-content-center mt-4 mt-lg-5">
+                                    <li class="d-flex align-items-center justify-content-center arrow__common ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" class="swiper-button-prev">
+                                            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" fill="#ea9a27" class="arrow__svg--path"/>
+                                        </svg>         
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-center arrow__common">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" class="swiper-button-next">
+                                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="#ea9a27" class="arrow__svg--path"/>
+                                        </svg>  
+                                    </li>
+                                </div>
                             </div>
-                            <div class="testimonial__name-wrapper mt-3 ">
-                                <p class="testimonial__patient-name m-0">John Doe</p>
-                                <p class="testimonial__patient-type m-lg-0 m-auto">Patient</p>
-                            </div>
-                        </div>
-
-                        <div class="arrow d-flex align-items-center justify-content-center mt-4 mt-lg-5" style="gap:2rem">
-                            <li class="d-flex align-items-center justify-content-center arrow__common">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
-                                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" fill="#ea9a27" class="arrow__svg--path"/>
-                                </svg>         
-                            </li>
-                            <li class="d-flex align-items-center justify-content-center arrow__common">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
-                                    <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="#ea9a27" class="arrow__svg--path"/>
-                                </svg>  
-                            </li>
-                        </div>
+                        </div>        
                     </div>
                 </div>
              </section>
@@ -398,7 +463,9 @@
              </section>
              <!-- consultation end -->
         </main>
+    <!-- Main end-->
 
+    <!-- Footer start -->
         <footer class="footer mt-11 mt-md-14 mt-lg-17">
             <div class="page-container">
                 <div class="footer__grid">
@@ -473,6 +540,11 @@
                 </div>
             </div>
         </footer>
+    <!-- Footer start -->
+
+    <!-- scripts start -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="./dist/bundle.min.js"></script>
+    <!-- scripts end -->
     </body>
 </html>

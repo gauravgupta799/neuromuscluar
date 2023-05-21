@@ -78,21 +78,44 @@
 }
 
 .rolfing{
-    background-image: url("../../../app/assets/img/home/rolfing-1.png");
-    @include background-cover;
-    // height: 658px;
+
+    @include breakpoint-lg{
+        background-image: url("../../../app/assets/img/home/rolfing-1.png");
+        @include background-cover;
+        height: rem(658);
+    }
+
+    &__imgWrapper{
+        img{
+            display: block;
+        }
+
+        @include breakpoint-lg{
+            img{
+                display: none;
+            }
+        }
+    }
 
     &__rightContainer{
-        background-image: url("../../../app/assets/img/home/rolfing-bg.webp");
-        @include background-cover;
+        background-color: $clr-primary;
         row-gap:em(48);
 
-        @include breakpoint-md{
+        @include breakpoint-lg{
+            background-image: url("../../../app/assets/img/home/rolfing-bg.webp");
+            @include background-cover;
             row-gap:em(68);
+            background-color: transparent;
+            height: rem(658);
         }
     }
     &__desc{
         line-height: 1.75;
+        text-align: center;
+
+        @include breakpoint-md{
+            text-align:left;
+        }
     }
 }
 
@@ -145,13 +168,13 @@
         width: rem(60);
         height: rem(60);
         padding: em(19) em(16);
-        border:2px solid $clr-primary;
-        background-color: $clr-white;
+        border:2px solid $clr-primary !important;
+        background-color: $clr-white !important;
         @include border-radius(50%);
         @include transition(all, 0.35s, ease-in-out);
 
         &:hover{
-            background-color:$clr-primary;
+            background-color:$clr-primary !important;
             cursor: pointer;
     
             .arrow__svg--path{
@@ -297,5 +320,11 @@
 
 }
 
-
+.swiper-button-next, .swiper-button-prev{
+    position: static;
+    top: 0 !important;
+    margin: 0 !important;
+    z-index: none !important;
+    color:$clr-secondary;
+}
 
