@@ -23,6 +23,9 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 .text-white{
     color:$clr-white;
 }
+.text-lightgray{
+    color:$clr-lightgray;
+}
 .text-uppercase{
     text-transform:uppercase;
 }

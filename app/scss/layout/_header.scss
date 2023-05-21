@@ -5,6 +5,7 @@
 
 .header{
     padding-block: rem(24);
+    @include transition(all, 0.3s, ease);
 
     @include breakpoint-sm{
         padding-block: rem(30);
@@ -27,13 +28,15 @@
     }
 
     &__nav{
+        position:relative;
         @include flex-space-between;
         column-gap:rem(50);
     }
+
     &__btn-nav{
         display: none !important;
 
-        @include breakpoint-md{
+        @include breakpoint-lg{
             display: block !important;
         }
     }
@@ -44,53 +47,138 @@
         z-index:9999;
         width:100%;
         background-color: $clr-body;
-        box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        box-shadow: 0 2px 5px rgba(57, 63, 72, 0.3);
+        @include transition(all, 0.3s, ease);
 
     }
 }
 
-.hamburger{
-    width: rem(30);
-    height: rem(2);
-    background-color: $clr-black;
-    position:relative;
+
+.header-wrapper--mobile{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    background-color: $clr-body;
+    opacity: 0;
+    visibility: hidden;
+    // transform:translateX(0);
+    transform:translateX(-100%);
+    @include transition(all, 0.4s, ease-in-out);
+
+    // @include breakpoint-sm{
+    //     transform:translateX(-100%);
+    // }
+
+    .mobile-nav{
+        height: 100vh;
+        @include transition(all, 0.4s, ease-in-out);
+    }
+
+    .nav__list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+            gap:3rem;
+            margin-top: 15%;
+    }
+    .nav__item{
+        font-size: rem(18);
+        line-height: rem(23);
+    }
+
+    &.is-open{
+        opacity: 1;
+        visibility:visible;
+
+        transform:translateX(0);
+        @include transition(all, 0.4s, ease-in-out);
+
+         @include breakpoint-sm{
+            transform:translateX(-10%);
+        }
+    }
+}
+
+
+
+.hamburger-wrapper{ 
+    height: 30px;
+    @include flex-center;
+    @include transition(all, 0.4s, ease-in-out);
+    cursor: pointer;
+ 
 
     @include breakpoint-sm{
-        width: rem(40);
+        width: rem(45);
     }
-
-    span{
-        width: 100%;
-        height: 100%;
+   
+    .hamburger{
+        position: relative;
+        display: inline-block;
+        top: -6px;
+        width:rem(30);
+        height: 2px;
         background-color: $clr-black;
-    }
-    &::before{
-        content:"";
-        position:absolute;
-        top:8px;
-        left: 0;
-        width:rem(28);
-        height: 100%;
-        background-color: $clr-black;
+        @include transition(all, 0.4s, ease-in-out);
 
         @include breakpoint-sm{
-            width: rem(38);
+            width: rem(45);
         }
-        
-    }
-    &::after{
-        content:"";
-        position:absolute;
-        top:-8px;
-        left: 0;
-        width: rem(38);
-        height: 100%;
-        background-color: $clr-black;
 
-        @include breakpoint-sm{
-            width: rem(43);
+        &::before{
+            content:"";
+            position:absolute;
+            top:10px;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: $clr-black;
+            @include transition(all, 0.4s, ease-in-out);
+    
+            @include breakpoint-sm{
+                width: 75%;
+                left: 0;
+            } 
+        }
+        &.is-open{
+            top: 0;
+            @include transform-rotate(135deg);
+            
+            &::before{
+                transform:rotate(-90deg) translate(5px, 5px);
+            }
         }
         
     }
 }
 
+.overlay{
+    position:fixed;
+    inset:rem(138) 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    @include transition(all, 0.4s, ease-in-out);
+
+    &.is-active{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+
+
+
+
+
+
+    // transform:translateX(0);

@@ -49,6 +49,7 @@
 // ======== setting font for header and body ======= //
 @mixin font-heading{
     // font-family:$ff-primary;
+    font-family:"Unbounded";
     font-weight:bold;
 }
 
@@ -63,4 +64,8 @@
 
 @mixin transition($property:all, $delay:0, $timing-func:ease){
     transition:$property $delay $timing-func;
+}
+
+@mixin transform-rotate($deg){
+    transform:rotate($deg) ;
 }

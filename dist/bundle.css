@@ -96,7 +96,6 @@ h4,
 h5,
 h6 {
   font-size: 100%;
-  font-family: "Unbounded";
 }
 
 h1 {
@@ -310,6 +309,7 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Unbounded";
   font-weight: bold;
 }
 
@@ -372,6 +372,10 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 
 .text-white {
   color: #ffffff;
+}
+
+.text-lightgray {
+  color: #414141;
 }
 
 .text-uppercase {
@@ -11349,6 +11353,9 @@ button.disable[type=submit] {
   font-weight: 800;
   font-size: 1.5rem;
 }
+.service__desc {
+  color: #414141;
+}
 
 .rolfing {
   background-image: url("../../../app/assets/img/home/rolfing-1.png");
@@ -11560,6 +11567,7 @@ button.disable[type=submit] {
 
 .header {
   padding-block: 1.5rem;
+  transition: all 0.3s ease;
 }
 @media only screen and (min-width: 36em) {
   .header {
@@ -11585,6 +11593,7 @@ button.disable[type=submit] {
   }
 }
 .header__nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11594,7 +11603,7 @@ button.disable[type=submit] {
 .header__btn-nav {
   display: none !important;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 62em) {
   .header__btn-nav {
     display: block !important;
   }
@@ -11604,52 +11613,117 @@ button.disable[type=submit] {
   z-index: 9999;
   width: 100%;
   background-color: #fcfbf5;
-  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 2px 5px rgba(57, 63, 72, 0.3);
+  transition: all 0.3s ease;
 }
 
-.hamburger {
-  width: 1.875rem;
-  height: 0.125rem;
-  background-color: #000;
-  position: relative;
+.header-wrapper--mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #fcfbf5;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+}
+.header-wrapper--mobile .mobile-nav {
+  height: 100vh;
+  transition: all 0.4s ease-in-out;
+}
+.header-wrapper--mobile .nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 15%;
+}
+.header-wrapper--mobile .nav__item {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+}
+.header-wrapper--mobile.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: all 0.4s ease-in-out;
 }
 @media only screen and (min-width: 36em) {
-  .hamburger {
-    width: 2.5rem;
+  .header-wrapper--mobile.is-open {
+    transform: translateX(-10%);
   }
 }
-.hamburger span {
+
+.hamburger-wrapper {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+@media only screen and (min-width: 36em) {
+  .hamburger-wrapper {
+    width: 2.8125rem;
+  }
+}
+.hamburger-wrapper .hamburger {
+  position: relative;
+  display: inline-block;
+  top: -6px;
+  width: 1.875rem;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.4s ease-in-out;
+}
+@media only screen and (min-width: 36em) {
+  .hamburger-wrapper .hamburger {
+    width: 2.8125rem;
+  }
+}
+.hamburger-wrapper .hamburger::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: inline-block;
   width: 100%;
   height: 100%;
   background-color: #000;
-}
-.hamburger::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 1.75rem;
-  height: 100%;
-  background-color: #000;
+  transition: all 0.4s ease-in-out;
 }
 @media only screen and (min-width: 36em) {
-  .hamburger::before {
-    width: 2.375rem;
+  .hamburger-wrapper .hamburger::before {
+    width: 75%;
+    left: 0;
   }
 }
-.hamburger::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 0;
-  width: 2.375rem;
-  height: 100%;
-  background-color: #000;
+.hamburger-wrapper .hamburger.is-open {
+  top: 0;
+  transform: rotate(135deg);
 }
-@media only screen and (min-width: 36em) {
-  .hamburger::after {
-    width: 2.6875rem;
-  }
+.hamburger-wrapper .hamburger.is-open::before {
+  transform: rotate(-90deg) translate(5px, 5px);
+}
+
+.overlay {
+  position: fixed;
+  inset: 8.625rem 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+  transition: all 0.4s ease-in-out;
+}
+.overlay.is-active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer {
