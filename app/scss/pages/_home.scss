@@ -8,6 +8,7 @@
 .hero{
     background-image: url("../../../app//assets/img/home/hero-img.webp");
     @include background-cover;
+    background-position: center bottom;
     height: rem(421);
     padding: 0;
     position: relative;
@@ -21,15 +22,20 @@
         padding-top:em(142);
         height: rem(721);
     }
-    // &::after{
-    //     content:"";
-    //     position:absolute;
-    //     inset:0;
-    //     width: 100%;
-    //     height: 100%;
-    //     z-index: 2;
-    //     background: linear-gradient(-10deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
-    // }
+    &::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../app//assets/img/home/hero-overlay.svg");
+        @include background-cover;
+        background-position: center bottom;
+    }
+    &__container{
+        position: absolute;
+        z-index: 1;
+    }
 
     &__heading {
         font-family:"Unbounded bold";
@@ -51,15 +57,58 @@
     }
 
     &__desc{
-        font-size: clamp(1.375rem, 6vw + 1rem, 1.75rem);
         line-height: 1.57;
         text-align: center;
+        font-size: rem(20) !important;
+
+        @include breakpoint-md{
+            font-size: rem(24) !important;
+        }
+        @include breakpoint-lg{
+            font-size: rem(28) !important;
+        }
     }
     &__controls{
         width: rem(109);
         height: rem(109);
         background-color: $clr-white;
         @include border-radius(50%);
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__action{
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        width: rem(80);
+        height: rem(80);
+        display: block;
+        background-color: $clr-white;
+        @include flex-center;
+        @include border-radius(50%);
+        @include breakpoint-lg{
+            width: rem(109);
+            height: rem(109);
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__play{
+
+        &.is-active{
+            display: none;
+        }
+    }
+    &__pause{
+        display: none;
+
+        &.is-active{
+            display: block;
+        }
     }
 }
 
@@ -71,9 +120,13 @@
     &__title{
         font-weight: 800;
         font-size: rem(24);
+        @include breakpoint-md{
+            margin-top: 0;
+        }
     }
     &__desc{
         color: $clr-lightgray;
+        text-transform: capitalize;
     }
 }
 
@@ -82,7 +135,7 @@
     @include breakpoint-lg{
         background-image: url("../../../app/assets/img/home/rolfing-1.png");
         @include background-cover;
-        height: rem(658);
+        // height: rem(658);
     }
 
     &__imgWrapper{
@@ -100,11 +153,18 @@
     &__rightContainer{
         background-color: $clr-primary;
         row-gap:em(48);
+        padding-block: em(90);
+
+        @include breakpoint-md{
+            padding-block: em(118);
+            row-gap:em(58);
+        }
 
         @include breakpoint-lg{
             background-image: url("../../../app/assets/img/home/rolfing-bg.webp");
             @include background-cover;
             row-gap:em(68);
+            padding-block: em(148);
             background-color: transparent;
             height: rem(658);
         }
@@ -112,6 +172,7 @@
     &__desc{
         line-height: 1.75;
         text-align: center;
+        text-transform: capitalize;
 
         @include breakpoint-md{
             text-align:left;
@@ -167,11 +228,15 @@
     &__common{
         width: rem(60);
         height: rem(60);
-        padding: em(19) em(16);
         border:2px solid $clr-primary !important;
         background-color: $clr-white !important;
         @include border-radius(50%);
         @include transition(all, 0.35s, ease-in-out);
+
+        @include breakpoint-md{
+            width: rem(60);
+            height: rem(60);
+        }
 
         &:hover{
             background-color:$clr-primary !important;
@@ -187,13 +252,13 @@
 .FAQs{
     background-image: url("../../../app/assets/img/home/retirementdcare_hero.webp");
     @include background-cover;
-    padding: em(230) em(0) em(180) em(0);
+    padding: em(200) em(0) em(140) em(0);
 
     @include breakpoint-md{
-        padding: em(251) em(0) em(212) em(0);
+        padding: em(240) em(0) em(190) em(0);
     }
     @include breakpoint-md{
-        padding: em(281) em(0) em(242) em(0);
+        padding: em(280) em(0) em(240) em(0);
     }
 
     &__summary{
@@ -212,23 +277,21 @@
         font-family:"Unbounded bold";
         font-weight: 800 !important;
         position:relative;
-        display: block;
-        // padding: em(12) em(0) em(20) em(0);
+        display: flex;
         padding-block: em(30);
         cursor: pointer;
 
         &::after{
             content:"\f078";
-            font-family: fontawesome;
+            font-family: "fontawesome";
             position:absolute;
-            // top: rem(13);
             right: rem(14);
             @include transition(transform, 0.4s);
         }
     }
     &__content{
         max-height: 0;
-        @include transition(all, 0.4s);
+        @include transition(all, 0.4s, ease-in-out);
         overflow: hidden;
         color:$clr-white;
 
@@ -266,65 +329,3 @@
     @include transition(all, 0.4s);
 }
 // Accordian end
-
-.form{
-
-    &__group{
-        max-width:100%;
-        height: rem(59);
-        padding-inline:em(20);
-        margin-bottom: rem(16);
-        background-color: $clr-white;
-        @include flex-center-vertical;
-        gap:2rem;
-
-        @include breakpoint-md{
-            padding-inline:em(40);
-            height: rem(59);
-        }
-        @include breakpoint-lg{
-            padding-inline:em(54);
-            height: rem(69);
-        }
-
-        &.isBorder{
-            border:2px solid $clr-secondary;
-        }
-    
-    }
-    &__control{
-        width: 100%;
-        height: 100%;
-        border:none;
-        outline:none;
-
-        &::placeholder{
-            font-size: rem(16);
-            font-family:"FutuBK";
-        }
-    }
-    &__textarea{
-        width: 100%;
-        background: transparent;
-        border: none;
-        outline: none;
-        resize:none;
-
-        &::placeholder{
-            content:"Note";
-        }
-    }
-    &__textarea--wrapper{
-        height: rem(164) !important;
-    }
-
-}
-
-.swiper-button-next, .swiper-button-prev{
-    position: static;
-    top: 0 !important;
-    margin: 0 !important;
-    z-index: none !important;
-    color:$clr-secondary;
-}
-

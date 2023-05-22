@@ -1,0 +1,10 @@
+@use "../abstract/colors" as *;
+
+
+.swiper-button-next, .swiper-button-prev{
+    position: static;
+    top: 0 !important;
+    margin: 0 !important;
+    z-index: none !important;
+    color:$clr-secondary;
+}

@@ -31,16 +31,24 @@
     &__list{
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
+
+        @include breakpoint-md{
+            row-gap: 1rem;
+        }
     }
     &__link , &__address{
         font-size: rem(18);
         color:$clr-white;
         line-height: rem(36);
     }
+    &__link {
+
+        &:hover{
+            color:$clr-hover;
+        }
+    }
     &__address{
         width: rem(210);
-        margin-top: rem(15);
     }
 
     &__privacy{
@@ -73,7 +81,11 @@
 
 .social{
      @include flex-center-vertical;
-    gap:2rem;
+     gap:1rem;
+
+    @include breakpoint-md{
+        gap:2rem;
+    }
 
     &__item{
         width: rem(46);

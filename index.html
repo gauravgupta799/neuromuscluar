@@ -11,20 +11,39 @@
     <title>Neuromuscular | Home Page </title>
 </head>
     <body class="body">
+        <div class="page-loader">
+            <div class="content">
+                <div class="loading">
+                    <p>loading</p>
+                   <span></span>
+                </div>
+             </div>
+        </div>
     <!-- Header start -->
         <header class="header">
             <div class="header-wrapper--desktop">
                 <div class="page-container">
                     <div class="header__container">
-                        <a href="" class="header__logo-wrapper">
+                        <a href="index.html" class="header__logo-wrapper">
                             <img src="./app/assets/logos/main-logo.webp" alt="Neuromuscular's Logo" class="img-fluid">
                         </a> 
                         <nav class="header__nav">              
-                            <a href="" class="btn btn--nav header__btn-nav" role="button">
+                            <a href="tel:619-206-6180" class="btn btn--nav header__btn-nav" role="button">
                                 (619) 206-6180
                             </a>
-                            <div class="hamburger-wrapper">
-                                <span class="hamburger"></span>
+                            <a href="tel:619-206-6180" class="header__phone-icon" title="619-206-6180" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27.01" height="27.008" viewBox="0 0 27.01 27.008">
+                                    <path id="Icon_ionic-ios-call" data-name="Icon ionic-ios-call" d="M30.72,25.65a22.686,22.686,0,0,0-4.739-3.171c-1.42-.682-1.941-.668-2.946.056-.837.6-1.378,1.167-2.341.956s-2.862-1.645-4.7-3.48-3.277-3.741-3.48-4.7.359-1.5.956-2.341c.724-1.005.745-1.526.056-2.946A22.238,22.238,0,0,0,10.35,5.28c-1.034-1.034-1.266-.809-1.835-.6a10.443,10.443,0,0,0-1.68.893A5.069,5.069,0,0,0,4.816,7.7c-.4.865-.865,2.475,1.5,6.68a37.272,37.272,0,0,0,6.553,8.74h0l.007.007.007.007h0a37.418,37.418,0,0,0,8.74,6.553c4.2,2.362,5.815,1.9,6.68,1.5a4.983,4.983,0,0,0,2.13-2.018,10.443,10.443,0,0,0,.893-1.68C31.528,26.916,31.76,26.684,30.72,25.65Z" transform="translate(-4.49 -4.502)" fill="#22b3c6"/>
+                                  </svg>
+                            </a>
+                            <div class="burger__wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50.646" height="12.5" viewBox="0 0 50.646 12.5" class="hamburger__svg-icon">
+                                    <g data-name="Group 98">
+                                        <path data-name="Line 39" transform="translate(0 .75)" style="fill:none;stroke:#000;stroke-width:1.5px" d="M50.646 0H0"/>
+                                        <path data-name="Line 40" transform="translate(0 11.75)" style="fill:none;stroke:#000;stroke-width:1.5px" d="M40 0H0"/>
+                                    </g>
+                                </svg>
+                                
                             </div>
                         </nav>   
                     </div>
@@ -33,15 +52,25 @@
             <div class="header-wrapper--mobile">
                <div class="page-container">
                     <nav class="mobile-nav">
-                        <ul class="nav__list">
-                            <li class="nav__item"><a href="" class="nav__link">Home</a></li>
-                            <li class="nav__item"><a href="" class="nav__link">About</a></li>
-                            <li class="nav__item"><a href="" class="nav__link">Services</a></li>
-                            <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
-                            <a href="" class="btn btn--nav" role="button">
+                        <div class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20.896" height="27.704" viewBox="0 0 20.896 27.704">
+                                <g id="Group_138" data-name="Group 138" transform="translate(-564.378 -47.545)">
+                                  <line id="Line_39" data-name="Line 39" x1="28" transform="matrix(0.695, -0.719, 0.719, 0.695, 564.918, 71.633)" fill="none" stroke="#000" stroke-width="1.5"/>
+                                  <line id="Line_40" data-name="Line 40" x1="13" y1="24" transform="translate(565.43 51.653) rotate(-16)" fill="none" stroke="#000" stroke-width="1.5"/>
+                                </g>
+                              </svg>                              
+                        </div>
+                        <div class="nav__list--wrapper">
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                            </ul>
+                            <a href="tel:619-206-6180" class="btn btn--nav" role="button">
                                 (619) 206-6180
                             </a>
-                        </ul>
+                        </div>
                     </nav>
                </div>
             </div>
@@ -53,7 +82,7 @@
         <main>
             <section class="hero">
                 <div class="page-container">
-                    <div class="hero__container">
+                    <div class="hero__container position-absolute z-2">
                         <div class="row g-0">
                             <div class="col-12 col-lg-6">
                                 <h2 class="hero__heading text-white text-capitalize">
@@ -61,7 +90,7 @@
                                 </h2>
                             </div>
                         </div>
-                        <a href="#" class="btn btn--primary hero__btn mt-5" role="button">
+                        <a href="#contact" class="btn btn--primary hero__btn mt-5" role="button">
                             Book Your Free Consultaton
                         </a>
                     </div>
@@ -78,16 +107,21 @@
                                     Arroyo Neuromuscular Integration is a powerful wholistic process based on this principle and takes into consideration the relationship
                                 </p>
                             </div>
-                        </div>                   
-                        <div class="mt-5 mt-md-7">
-                            <figure class="position-relative">                       
-                                    <img src="./app/assets/img/home/video-picture.webp" alt="" class="img-fluid">
-                                    <!-- <div class="video__controls ">
-                                   
-                                    </div>   -->
-                            </figure>
-
-                        </div>
+                        </div>   
+                        <div class="col-lg-10 mt-7 mt-md-7 video__wrapper ">
+                            <div class="video__box">
+                                <video poster="./app/assets/img/home/video-picture.webp"
+                                 width="100%" class="home__video">
+                                    <source src="./app/assets/video/demo-video.mp4" type="video/mp4"></source>
+                                </video>
+                            </div>
+                            <div class="video__action">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="29" height="29" class="video__play"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" fill="#ea9a27"/></svg> 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="29" height="29" class="video__pause">
+                                    <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z" fill="#ea9a27"/>
+                                </svg>                    
+                            </div>
+                        </div>                
                         <a href="" role="button" class="btn btn--primary video__btn mt-7">
                             Book Your Free Consultation
                         </a>
@@ -106,10 +140,10 @@
                     </div>
                     <div class="row mt-6 mt-md-11 g-0">
                         <div class="col-sm-12 col-md-6 col-lg-7">
-                            <img src="./app/assets/img/home/massage-table-1.webp" alt="" class="img-fluid" >
+                            <img src="./app/assets/img/home/massage-table-1.webp" alt="" class="img-fluid" loading="lazy">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-5 pt-lg-6 pl-md-3 pl-lg-6">
-                            <div class="row g-0">
+                            <div class="row g-0 mt-4 mt-md-0">
                                 <h6 class="text-primary service__title">
                                     The 10 Series
                                 </h6>
@@ -128,7 +162,7 @@
                     </div>
                     <div class="row mt-6 mt-md-10 g-0">     
                         <div class="col-sm-12 col-md-6 col-lg-5 pt-lg-6 order-2 order-md-0 ">
-                            <div class="row g-0">
+                            <div class="row g-0 mt-4 mt-md-0">
                                 <h6 class="text-primary service__title">
                                     The 10 Series
                                 </h6>
@@ -140,12 +174,12 @@
                                     labore et dolore magna aliquyam erat, sed diam
                                 </p>
                             </div>
-                            <a href="" role="button" class="btn btn--primary mt-4 mt-md-5">
+                            <a href="#contact" role="button" class="btn btn--primary mt-4 mt-md-5">
                                 Book Your Free Consultation
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-7">
-                            <img src="./app/assets/img/home/Family-Support-Timeline.webp" alt="" class="img-fluid">
+                            <img src="./app/assets/img/home/Family-Support-Timeline.webp" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -156,14 +190,14 @@
             <section class="rolfing mt-10 mt-md-15 mt-lg-20">
                 <div class="row g-0">
                     <div class="col-md-12 col-lg-6 rolfing__imgWrapper">
-                        <img src="./app/assets/img/home/rolfing-1.png" alt="" class="img-fluid" >
+                        <img src="./app/assets/img/home/rolfing-1.png" alt="Rolfing's image" class="img-fluid" loading="lazy">
                     </div>
-                    <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-around 
-                    px-2 px-md-4 px-lg-7 py-5 py-md-7 py-lg-9 
-                    rolfing__rightContainer">
+                    <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-around px-2 px-md-4 px-lg-7 rolfing__rightContainer">
                         <div class="row g-0 d-flex align-items-center justify-content-center">
                             <div class="col-lg-5">
-                                <h2 class="text-center text-white">12+</h2>
+                                <h2 class="text-center text-white count-digit">
+                                    12<span class="count-digit-suffix">+</span>
+                                </h2>
                             </div>
                             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center mt-md-1 mt-lg-0">                  
                                 <span class="text-white rolfing__desc">
@@ -214,13 +248,13 @@
                                     At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
                                 </p>
                              </div>
-                            <a href="" role="button" class="btn btn--primary consetetur__btn mt-4 mt-md-5">
+                            <a href="#contact" role="button" class="btn btn--primary consetetur__btn mt-4 mt-md-5">
                                 Book Your Free Consultation
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6 mt-5 mt-lg-0">
                             <figure>
-                                <img src="./app/assets/img/home/louie-profile-1.webp" alt="" class="img-fluid">
+                                <img src="./app/assets/img/home/louie-profile-1.webp" alt="Louie Prifile's Image" class="img-fluid" loading="lazy">
                             </figure>
                         </div>
                     </div>
@@ -250,7 +284,7 @@
                                         </div>
                                             <div class="testimonial__thumbnail-wrapper mt-4">
                                                 <div class="testimonial__thumbnail">
-                                                    <img src="" alt="">
+                                                    <img src="" alt="" class="img-fluid" loading="lazy">
                                                 </div>
                                                 <div class="testimonial__name-wrapper mt-3 ">
                                                     <p class="testimonial__patient-name m-0">John Doe</p>
@@ -268,7 +302,7 @@
                                         </div>
                                             <div class="testimonial__thumbnail-wrapper mt-4">
                                                 <div class="testimonial__thumbnail">
-                                                    <img src="" alt="">
+                                                    <img src="" alt="" class="img-fluid" loading="lazy">
                                                 </div>
                                                 <div class="testimonial__name-wrapper mt-3 ">
                                                     <p class="testimonial__patient-name m-0">John Doe</p>
@@ -286,7 +320,7 @@
                                         </div>
                                             <div class="testimonial__thumbnail-wrapper mt-4">
                                                 <div class="testimonial__thumbnail">
-                                                    <img src="" alt="">
+                                                    <img src="" alt="" class="img-fluid" loading="lazy">
                                                 </div>
                                                 <div class="testimonial__name-wrapper mt-3 ">
                                                     <p class="testimonial__patient-name m-0">John Doe</p>
@@ -304,7 +338,7 @@
                                         </div>
                                             <div class="testimonial__thumbnail-wrapper mt-4">
                                                 <div class="testimonial__thumbnail">
-                                                    <img src="" alt="">
+                                                    <img src="" alt="" class="img-fluid" loading="lazy">
                                                 </div>
                                                 <div class="testimonial__name-wrapper mt-3 ">
                                                     <p class="testimonial__patient-name m-0">John Doe</p>
@@ -333,7 +367,7 @@
              <!-- testimonials start -->
 
              <!-- FAQ start -->
-             <section class="FAQs mt-10 mt-lg-13">
+             <section class="FAQs mt-10 mt-lg-15">
                 <div class="page-container">
                     <div class="row g-0">
                         <div class="col-sm-12 col-md-6">
@@ -379,7 +413,7 @@
                                     <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle4">
                                     <label for="toggle4" class="accordian__label">
                                         Benefits of Structural Integration-3
-                                    </label>
+                                    </label>                           
                                     <div class="accordian__divider"></div>
                                     <div class="accordian__content">
                                         <p class="m-0">
@@ -450,8 +484,9 @@
                                     <input type="phone" name="phone" value="" placeholder="Phone Number" class="form__control" onfocus="this.placeholder=''" onblur="this.placeholder='Phone Number'">
                                 </div>
                                 <div class="form__group form__textarea--wrapper">               
-                                    <textarea  type="text" name="note" value="" id="note" cols="30" rows="10" placeholder="Note" class="form__textarea" onfocus="this.placeholder=''" onblur="this.placeholder='Note'">                              
-                                    </textarea>
+                                    <div class="form-group form__textarea--wrapper">
+                                        <textarea id="note" onfocus="this.placeholder=''" onblur="this.placeholder='Note'" class="form-control form__textarea" placeholder="Note" spellcheck="false"></textarea>
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn btn--contact mt-4">
                                     Submit The Details
@@ -470,8 +505,8 @@
             <div class="page-container">
                 <div class="footer__grid">
                     <div class="footer__logoWrapper">
-                        <a href="" class="footer__logo d-inline-flex flex-column">
-                            <img src="./app/assets/logos/footer-logo.webp" alt="" class="img-fluid">
+                        <a href="index.html" class="footer__logo d-inline-flex flex-column">
+                            <img src="./app/assets/logos/footer-logo.webp" alt="Neuromuscular's logo" class="img-fluid">
                         </a>
                         <ul class="social mt-4 ml-lg-0">
                             <li class="social__item">
@@ -504,18 +539,18 @@
                     </div>
                     </ul>
                     <ul class="footer__list pl-lg-4">
-                        <li class="footer__item"><a href="" class="footer__link">Meet Louie</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Resources</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Contact</a></li>
+                        <li class="footer__item"><a href="#meet-louie" class="footer__link">Meet Louie</a></li>
+                        <li class="footer__item"><a href="#resources" class="footer__link">Resources</a></li>
+                        <li class="footer__item"><a href="#vcontact" class="footer__link">Contact</a></li>
                     </ul>       
                     <ul class="footer__list">
-                        <li class="footer__item"><a href="" class="footer__link">Structural Integration</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">The 10 Series</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Typical Session</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Structural Integration</a></li>
+                        <li class="footer__item"><a href="#series" class="footer__link">The 10 Series</a></li>
+                        <li class="footer__item"><a href="#session" class="footer__link">Typical Session</a></li>
                     </ul>
                     <ul class="footer__list">
-                        <li class="footer__item"><a href="" class="footer__link">(619) 206-6180</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">info@louie.com</a></li>
+                        <li class="footer__item"><a href="tel:619-206-6180" class="footer__link" target="">(619) 206-6180</a></li>
+                        <li class="footer__item"><a href="mailto: info@louie.com" class="footer__link">info@louie.com</a></li>
                         <li class="footer__item">
                             <address class="footer__address">
                                 6612 Mission Gorge Rd.

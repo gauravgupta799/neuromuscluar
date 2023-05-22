@@ -84,3 +84,15 @@
   h6 {
     font-size: 100%;
 }
+
+button{
+  border:none;
+  font-family:"FutuBK";
+}
+
+
+*::placeholder{
+  font-size: rem(16);
+  font-family:"FutuBK";
+  color:$clr-black !important;
+}

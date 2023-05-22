@@ -4,11 +4,11 @@
 @use "../abstract/mixins" as *;
 
 .header{
-    padding-block: rem(24);
+    padding-block: rem(20);
     @include transition(all, 0.3s, ease);
 
-    @include breakpoint-sm{
-        padding-block: rem(30);
+    @include breakpoint-md{
+        padding-block: rem(24);
     }
 
     &__container{
@@ -26,11 +26,28 @@
             height: rem(78);
         }
     }
+    &__svg-icon{
+        width: rem(30.646);
+        height:12.5;
+
+        @include breakpoint-md{
+            width: rem(40.646);
+        }
+        @include breakpoint-lg{
+            width: rem(50.646);
+        }
+    }
 
     &__nav{
         position:relative;
         @include flex-space-between;
-        column-gap:rem(50);
+        column-gap:rem(20);
+        padding-top: em(14);
+
+        @include breakpoint-sm{
+            column-gap:rem(50);
+            padding-top: 0;
+        }
     }
 
     &__btn-nav{
@@ -40,7 +57,13 @@
             display: block !important;
         }
     }
+    &__phone-icon{
+            display: block !important;
 
+        @include breakpoint-lg{
+             display: none !important;
+        }
+    }
 
     &.sticky{
         position:fixed;
@@ -53,7 +76,6 @@
     }
 }
 
-
 .header-wrapper--mobile{
     position:fixed;
     top: 0;
@@ -64,13 +86,9 @@
     background-color: $clr-body;
     opacity: 0;
     visibility: hidden;
-    // transform:translateX(0);
-    transform:translateX(-100%);
+    transform:translateX(100%);
     @include transition(all, 0.4s, ease-in-out);
 
-    // @include breakpoint-sm{
-    //     transform:translateX(-100%);
-    // }
 
     .mobile-nav{
         height: 100vh;
@@ -78,88 +96,122 @@
     }
 
     .nav__list{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content:center;
-            gap:3rem;
-            margin-top: 15%;
+        @include flex-center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:3rem;
+        margin-top: 15%;
+        margin-left: rem(80);
+        margin-bottom: rem(50);
+
     }
     .nav__item{
         font-size: rem(18);
         line-height: rem(23);
+        position: relative;
+
+        &::before{
+            content:"";
+            position:absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1.8px;
+            margin-top: 10px;
+            transform:scaleX(0);
+            transform-origin:left;
+            @include transition(all, 0.4s, ease-in-out);  
+            background-color: $clr-primary; 
+        }
+
+        &:hover{
+            &::before{
+                transform:scaleX(1);
+            }
+        }
     }
 
     &.is-open{
         opacity: 1;
         visibility:visible;
-
-        transform:translateX(0);
+        transform:translateX(25%);
         @include transition(all, 0.4s, ease-in-out);
 
-         @include breakpoint-sm{
-            transform:translateX(-10%);
+        @include breakpoint-sm{
+            transform:translateX(50%);
+        }
+        @include breakpoint-md{
+            transform:translateX(50%);
+        }
+         @include breakpoint-lg{
+            transform:translateX(61%);
+        }
+         @include breakpoint-xl{
+            transform:translateX(71%);
         }
     }
 }
 
 
 
-.hamburger-wrapper{ 
-    height: 30px;
+.burger__wrapper{ 
+    width: rem(40);
     @include flex-center;
     @include transition(all, 0.4s, ease-in-out);
     cursor: pointer;
- 
 
     @include breakpoint-sm{
         width: rem(45);
     }
    
-    .hamburger{
-        position: relative;
-        display: inline-block;
-        top: -6px;
-        width:rem(30);
-        height: 2px;
-        background-color: $clr-black;
-        @include transition(all, 0.4s, ease-in-out);
+    // .hamburger{
+    //     position: relative;
+    //     display: inline-block;
+    //     top: -6px;
+    //     width:rem(30);
+    //     height: 2px;
+    //     background-color: $clr-black;
+    //     @include transition(all, 0.4s, ease-in-out);
 
-        @include breakpoint-sm{
-            width: rem(45);
-        }
+    //     @include breakpoint-sm{
+    //         width: rem(45);
+    //     }
 
-        &::before{
-            content:"";
-            position:absolute;
-            top:10px;
-            left: 0;
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            background-color: $clr-black;
-            @include transition(all, 0.4s, ease-in-out);
+    //     &::before{
+    //         content:"";
+    //         position:absolute;
+    //         top:10px;
+    //         left: 0;
+    //         display: inline-block;
+    //         width: 100%;
+    //         height: 100%;
+    //         background-color: $clr-black;
+    //         @include transition(all, 0.4s, ease-in-out);
     
-            @include breakpoint-sm{
-                width: 75%;
-                left: 0;
-            } 
-        }
-        &.is-open{
-            top: 0;
-            @include transform-rotate(135deg);
+    //         @include breakpoint-sm{
+    //             width: 75%;
+    //             left: 0;
+    //         } 
+    //     }
+    //     &.is-open{
+    //         top: 0;
+    //         @include transform-rotate(135deg);
             
-            &::before{
-                transform:rotate(-90deg) translate(5px, 5px);
-            }
-        }
+    //         &::before{
+    //             transform:rotate(-90deg) translate(5px, 5px);
+    //         }
+    //     }
         
+    // }
+
+    &.is-open{
+        top: 0;
+        @include transform-rotate(135deg);
     }
 }
 
 .overlay{
     position:fixed;
-    inset:rem(138) 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(0,0,0,0.6);
@@ -174,11 +226,34 @@
     }
 }
 
+.close-btn{
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    margin-left: 65%;
+    margin-top: 10%;
 
+    @include breakpoint-sm{
+        margin-left: 40%;
+    }
 
+    @include breakpoint-md{
+        width: 30px;
+        height: 30px;
+        margin-top: 7%;
+    
+    }
+    @include breakpoint-lg{
+        width: 40px;
+        height: 40px;
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+    @include breakpoint-lg{
+        margin-left: 20%;
+        margin-top: 3.5%;
+    }
 
-
-
-
-
-    // transform:translateX(0);
+}
