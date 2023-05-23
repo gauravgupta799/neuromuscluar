@@ -126,7 +126,6 @@
     }
     &__desc{
         color: $clr-lightgray;
-        text-transform: capitalize;
     }
 }
 
@@ -134,8 +133,8 @@
 
     @include breakpoint-lg{
         background-image: url("../../../app/assets/img/home/rolfing-1.png");
-        @include background-cover;
-        // height: rem(658);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     &__imgWrapper{

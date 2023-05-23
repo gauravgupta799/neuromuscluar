@@ -79,8 +79,8 @@
 .header-wrapper--mobile{
     position:fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 75%;
     height: 100vh;
     z-index: 99999;
     background-color: $clr-body;
@@ -89,6 +89,18 @@
     transform:translateX(100%);
     @include transition(all, 0.4s, ease-in-out);
 
+    @include breakpoint-sm{
+        width: 50%;
+    }
+    @include breakpoint-md{
+        width: 40%;
+    }
+    @include breakpoint-xl{
+        width: 35%;
+    }
+    @include breakpoint-xl{
+        width: 30%;
+    }
 
     .mobile-nav{
         height: 100vh;
@@ -98,11 +110,8 @@
     .nav__list{
         @include flex-center;
         flex-direction: column;
-        align-items: flex-start;
         gap:3rem;
         margin-top: 15%;
-        margin-left: rem(80);
-        margin-bottom: rem(50);
 
     }
     .nav__item{
@@ -134,21 +143,8 @@
     &.is-open{
         opacity: 1;
         visibility:visible;
-        transform:translateX(25%);
+        transform:translateX(0);
         @include transition(all, 0.4s, ease-in-out);
-
-        @include breakpoint-sm{
-            transform:translateX(50%);
-        }
-        @include breakpoint-md{
-            transform:translateX(50%);
-        }
-         @include breakpoint-lg{
-            transform:translateX(61%);
-        }
-         @include breakpoint-xl{
-            transform:translateX(71%);
-        }
     }
 }
 
@@ -227,33 +223,9 @@
 }
 
 .close-btn{
-    width: 25px;
-    height: 25px;
-    display: grid;
-    place-items: center;
+    height: rem(50);
+    @include flex-center-vertical;
+    justify-content: flex-end;
     cursor: pointer;
-    margin-left: 65%;
     margin-top: 10%;
-
-    @include breakpoint-sm{
-        margin-left: 40%;
-    }
-
-    @include breakpoint-md{
-        width: 30px;
-        height: 30px;
-        margin-top: 7%;
-    
-    }
-    @include breakpoint-lg{
-        width: 40px;
-        height: 40px;
-        margin-left: 30%;
-        margin-top: 5%;
-    }
-    @include breakpoint-lg{
-        margin-left: 20%;
-        margin-top: 3.5%;
-    }
-
 }

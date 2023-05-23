@@ -11439,15 +11439,13 @@ button.disable[type=submit] {
 }
 .service__desc {
   color: #414141;
-  text-transform: capitalize;
 }
 
 @media only screen and (min-width: 62em) {
   .rolfing {
     background-image: url("../../../app/assets/img/home/rolfing-1.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-size: contain;
   }
 }
 .rolfing__imgWrapper img {
@@ -11712,8 +11710,8 @@ button.disable[type=submit] {
 .header-wrapper--mobile {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 75%;
   height: 100vh;
   z-index: 99999;
   background-color: #fcfbf5;
@@ -11721,6 +11719,26 @@ button.disable[type=submit] {
   visibility: hidden;
   transform: translateX(100%);
   transition: all 0.4s ease-in-out;
+}
+@media only screen and (min-width: 36em) {
+  .header-wrapper--mobile {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .header-wrapper--mobile {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 80em) {
+  .header-wrapper--mobile {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 80em) {
+  .header-wrapper--mobile {
+    width: 30%;
+  }
 }
 .header-wrapper--mobile .mobile-nav {
   height: 100vh;
@@ -11731,11 +11749,8 @@ button.disable[type=submit] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  align-items: flex-start;
   gap: 3rem;
   margin-top: 15%;
-  margin-left: 5rem;
-  margin-bottom: 3.125rem;
 }
 .header-wrapper--mobile .nav__item {
   font-size: 1.125rem;
@@ -11761,28 +11776,8 @@ button.disable[type=submit] {
 .header-wrapper--mobile.is-open {
   opacity: 1;
   visibility: visible;
-  transform: translateX(25%);
+  transform: translateX(0);
   transition: all 0.4s ease-in-out;
-}
-@media only screen and (min-width: 36em) {
-  .header-wrapper--mobile.is-open {
-    transform: translateX(50%);
-  }
-}
-@media only screen and (min-width: 48em) {
-  .header-wrapper--mobile.is-open {
-    transform: translateX(50%);
-  }
-}
-@media only screen and (min-width: 62em) {
-  .header-wrapper--mobile.is-open {
-    transform: translateX(61%);
-  }
-}
-@media only screen and (min-width: 80em) {
-  .header-wrapper--mobile.is-open {
-    transform: translateX(71%);
-  }
 }
 
 .burger__wrapper {
@@ -11819,39 +11814,12 @@ button.disable[type=submit] {
 }
 
 .close-btn {
-  width: 25px;
-  height: 25px;
-  display: grid;
-  place-items: center;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   cursor: pointer;
-  margin-left: 65%;
   margin-top: 10%;
-}
-@media only screen and (min-width: 36em) {
-  .close-btn {
-    margin-left: 40%;
-  }
-}
-@media only screen and (min-width: 48em) {
-  .close-btn {
-    width: 30px;
-    height: 30px;
-    margin-top: 7%;
-  }
-}
-@media only screen and (min-width: 62em) {
-  .close-btn {
-    width: 40px;
-    height: 40px;
-    margin-left: 30%;
-    margin-top: 5%;
-  }
-}
-@media only screen and (min-width: 62em) {
-  .close-btn {
-    margin-left: 20%;
-    margin-top: 3.5%;
-  }
 }
 
 .form__group {

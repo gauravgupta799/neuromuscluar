@@ -14,7 +14,7 @@
         <div class="page-loader">
             <div class="content">
                 <div class="loading">
-                    <p>loading</p>
+                    <p>Loading</p>
                    <span></span>
                 </div>
              </div>
@@ -49,6 +49,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="header-wrapper--mobile">
                <div class="page-container">
                     <nav class="mobile-nav">
@@ -60,23 +61,21 @@
                                 </g>
                               </svg>                              
                         </div>
-                        <div class="nav__list--wrapper">
-                            <ul class="nav__list">
-                                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                            </ul>
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
                             <a href="tel:619-206-6180" class="btn btn--nav" role="button">
                                 (619) 206-6180
                             </a>
-                        </div>
+                        </ul>
                     </nav>
                </div>
             </div>
         </header>
     <!-- Header end -->
-        <div class="overlay"></div>
+    <div class="overlay"></div>
 
     <!-- Main start -->
         <main>
@@ -111,12 +110,13 @@
                         <div class="col-lg-10 mt-7 mt-md-7 video__wrapper ">
                             <div class="video__box">
                                 <video poster="./app/assets/img/home/video-picture.webp"
-                                 width="100%" class="home__video">
+                                 width="100%" class="video__video-tag">
                                     <source src="./app/assets/video/demo-video.mp4" type="video/mp4"></source>
                                 </video>
                             </div>
                             <div class="video__action">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="29" height="29" class="video__play"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" fill="#ea9a27"/></svg> 
+
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="29" height="29" class="video__pause">
                                     <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z" fill="#ea9a27"/>
                                 </svg>                    
@@ -195,8 +195,8 @@
                     <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-around px-2 px-md-4 px-lg-7 rolfing__rightContainer">
                         <div class="row g-0 d-flex align-items-center justify-content-center">
                             <div class="col-lg-5">
-                                <h2 class="text-center text-white count-digit">
-                                    12<span class="count-digit-suffix">+</span>
+                                <h2 class="text-center text-white count-digit" data-val="12">12
+                                    <span class="count-digit-suffix">+</span>
                                 </h2>
                             </div>
                             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center mt-md-1 mt-lg-0">                  
@@ -207,7 +207,10 @@
                         </div>
                         <div class="row g-0 d-flex align-items-center justify-content-center">
                             <div class="col-lg-5">
-                                <h2 class="text-center text-white">43+</h2>
+                                <h2 class="text-center text-white" data-val="43">
+                                    43
+                                    <span class="count-digit-suffix">+</span>
+                                </h2>
                             </div>
                             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center">                  
                                 <span class="text-white rolfing__desc d-flex align-items-center justify-content-center">
@@ -217,7 +220,10 @@
                         </div>
                         <div class="row g-0 d-flex align-items-center justify-content-center">
                             <div class="col-lg-5">
-                                <h2 class="text-center text-white">43+</h2>
+                                <h2 class="text-center text-white" data-val="43">
+                                    43
+                                    <span class="count-digit-suffix">+</span>
+                                </h2>
                             </div>
                             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center">                  
                                 <span class="text-white rolfing__desc">
