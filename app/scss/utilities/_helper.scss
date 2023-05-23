@@ -20,6 +20,9 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 .text-center{
     text-align:center;
 }
+.text-left{
+    text-align:left
+}
 .text-white{
     color:$clr-white;
 }
@@ -42,15 +45,27 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
   text-decoration: underline;   
 }
 
-.section-header{
-    max-width:rem(650);
-    margin:0 auto;
+.secondary--para{
+    line-height: 1.57;
+    font-size: rem(20) !important;
+
+    @include breakpoint-md{
+        font-size: rem(24) !important;
+    }
+    @include breakpoint-lg{
+        font-size: rem(28) !important;
+    }
 }
 
-.section-heading p{
-    max-width:rem(500);
-    margin-inline:auto;
-}
+// .section-header{
+//     max-width:rem(650);
+//     margin:0 auto;
+// }
+
+// .section-heading p{
+//     max-width:rem(500);
+//     margin-inline:auto;
+// }
 
 .overflow-hidden{
     overflow:hidden;

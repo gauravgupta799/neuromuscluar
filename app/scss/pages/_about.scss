@@ -1,0 +1,88 @@
+@use "../abstract/fonts";
+@use "../abstract/colors" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+
+.about--hero{
+    background-image: url("../../../app//assets/img/about/hero-brisk-walk-stock.webp");
+    @include background-cover;
+    background-position: center bottom;
+}
+
+.about{
+
+    &__desc{
+        line-height: 1.57;
+        text-align: left;
+        font-size: rem(20) !important;
+
+        @include breakpoint-md{
+            font-size: rem(24) !important;
+        }
+        @include breakpoint-lg{
+            font-size: rem(28) !important;
+        }
+    }
+    &__img-2{
+        height: 100%;
+
+        @include breakpoint-md{
+            height: 100%;
+        }
+    }
+}
+
+.quotes{
+    background-image: url("../../../app//assets/img/about/quote-bg.svg");
+    @include background-cover;
+    background-position: center top;
+    // height: rem(360);
+    padding: em(83) em(16) em(32);
+
+    @include breakpoint-sm{
+        padding: em(103) em(68) em(52);
+    }
+    @include breakpoint-md{
+        padding: em(123) em(150) em(72);
+    }
+    @include breakpoint-lg{
+        padding: em(143) em(250) em(72);
+    }
+}
+
+.steps-neuro{
+    position:relative;
+
+    &__step{
+        width: 117px;
+        height: 117px;
+        background-color: $clr-primary;
+        @include flex-center;
+        @include border-radius(50%);
+    }
+}
+
+.benifits{
+    background-image: url("../../../app//assets/img/about/benifits-bg.svg");
+    @include background-cover;
+    background-position: center top; 
+    padding: em(200) em(16) em(60) em(16);
+
+    @include breakpoint-sm{
+        padding: em(200) em(48) em(100) em(48);
+    }
+    @include breakpoint-md{
+        padding: em(200) em(100) em(140) em(100);
+    }
+    @include breakpoint-lg{
+        padding: em(200) em(200) em(170) em(170);
+    }
+}
+
+.rolfing-san{
+    background-image: url("../../../app//assets/img/about/rolfing-san-diego-benifit.webp");
+    @include background-cover;
+    height: 607px;
+}

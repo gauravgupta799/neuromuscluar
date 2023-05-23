@@ -42,16 +42,18 @@ function closeMenu(){
 }
 
 // Video play & pause action
-playBtn.addEventListener('click', function(){
-      video.play();
-      playBtn.style.display = 'none';
-      pauseBtn.style.display = 'block';
-})
-pauseBtn.addEventListener('click', function(){
-    playBtn.style.display = 'block';
-    pauseBtn.style.display = 'none';
-    video.pause();
-})
+if(playBtn != null && pauseBtn != null){
+  playBtn.addEventListener('click', function(){
+        video.play();
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'block';
+  })
+  pauseBtn.addEventListener('click', function(){
+      playBtn.style.display = 'block';
+      pauseBtn.style.display = 'none';
+      video.pause();
+  })
+}
 
 
 // Counter
