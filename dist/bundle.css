@@ -11775,7 +11775,7 @@ button.disable[type=submit] {
     height: 45.0625rem;
   }
 }
-.hero::before {
+.hero::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -12003,6 +12003,7 @@ button.disable[type=submit] {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-position: center top;
   padding: 12.5em 0em 8.75em 0em;
 }
 @media only screen and (min-width: 48em) {
@@ -12070,8 +12071,29 @@ button.disable[type=submit] {
   background-size: cover;
   background-position: center center;
   background-position: center bottom;
+  position: relative;
+}
+.about--hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../app//assets/img/about/retirementandagedcare_hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-position: center bottom;
 }
 
+.about__heading--wrapper {
+  text-align: center;
+}
+@media only screen and (min-width: 62em) {
+  .about__heading--wrapper {
+    text-align: left;
+  }
+}
 .about__desc {
   line-height: 1.57;
   text-align: left;
@@ -12131,6 +12153,18 @@ button.disable[type=submit] {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  position: relative;
+}
+
+@media only screen and (min-width: 62em) {
+  .horizontal--line {
+    position: absolute;
+    top: 34%;
+    width: 60%;
+    left: 22%;
+    height: 3px;
+    background-color: #005e83;
+  }
 }
 
 .benifits {
@@ -12139,22 +12173,7 @@ button.disable[type=submit] {
   background-size: cover;
   background-position: center center;
   background-position: center top;
-  padding: 12.5em 1em 3.75em 1em;
-}
-@media only screen and (min-width: 36em) {
-  .benifits {
-    padding: 12.5em 3em 6.25em 3em;
-  }
-}
-@media only screen and (min-width: 48em) {
-  .benifits {
-    padding: 12.5em 6.25em 8.75em 6.25em;
-  }
-}
-@media only screen and (min-width: 62em) {
-  .benifits {
-    padding: 12.5em 12.5em 10.625em 10.625em;
-  }
+  padding-block: 11.5625em;
 }
 
 .rolfing-san {

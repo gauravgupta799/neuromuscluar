@@ -22,7 +22,7 @@
         padding-top:em(142);
         height: rem(721);
     }
-    &::before{
+    &::after{
         content:"";
         position:absolute;
         inset:0;
@@ -251,6 +251,7 @@
 .FAQs{
     background-image: url("../../../app/assets/img/home/retirementdcare_hero.webp");
     @include background-cover;
+    background-position: center top;
     padding: em(200) em(0) em(140) em(0);
 
     @include breakpoint-md{
