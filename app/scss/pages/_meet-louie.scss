@@ -1,0 +1,102 @@
+@use "../abstract/fonts";
+@use "../abstract/colors" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+.louie--hero{
+    background-image: url("../../../app//assets/img/meet-louie/arroyoneuromuscularintegration-slider.webp");
+    @include background-cover;
+    background-position: center bottom;
+}
+
+.louie{
+    margin-top: rem(130);
+
+    @include breakpoint-sm{
+        margin-top: rem(150);
+    }
+    @include breakpoint-md{
+        margin-top: rem(170);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(190);
+    }
+
+    &__rightWrapper{
+        margin-top: rem(50) !important;
+
+        @include breakpoint-md{
+            margin-top: 0 !important;
+        }
+    }
+
+}
+
+.louie-counter{
+    margin-top: rem(140);
+    @include breakpoint-sm{
+        margin-top: rem(170);
+    }
+    @include breakpoint-md{
+        margin-top: rem(200);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(230);
+    }
+
+    &__heading{
+        font-size: rem(56) !important;
+        margin-top: rem(30);
+
+        @include breakpoint-sm{
+            font-size: rem(72) !important;
+            margin-top: rem(50);
+        }
+        @include breakpoint-md{
+            font-size: rem(88) !important;
+            margin-top: rem(50);
+        }
+    }
+
+    &__para{
+        padding-inline:em(20);
+        text-align: center;
+    }
+}
+
+.louie-rofiling{
+    margin-top: rem(120);
+
+    @include breakpoint-sm{
+        margin-top: rem(150);
+    }
+    @include breakpoint-md{
+        margin-top: rem(180);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(215);
+    }
+}
+
+.philosophy{
+    margin-top: rem(130);
+
+    @include breakpoint-md{
+        margin-top: rem(150);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(170);
+    }
+}
+
+.awards{
+    margin-top: rem(30);
+
+    @include breakpoint-md{
+        margin-top: rem(50);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(70);
+    }
+}

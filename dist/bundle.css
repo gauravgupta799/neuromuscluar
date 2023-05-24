@@ -12356,6 +12356,11 @@ button.disable[type=submit] {
 .connect__item {
   display: inline-block;
   margin-top: 2.0625rem;
+  transition: all 0.4s ease-in-out;
+}
+.connect__item:hover {
+  cursor: pointer;
+  color: #e4e4e1;
 }
 .connect__address {
   padding-inline: 4.375rem;
@@ -12366,6 +12371,127 @@ button.disable[type=submit] {
 }
 .map__google-map {
   height: 100%;
+}
+
+.louie--hero {
+  background-image: url("../../../app//assets/img/meet-louie/arroyoneuromuscularintegration-slider.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-position: center bottom;
+}
+
+.louie {
+  margin-top: 8.125rem;
+}
+@media only screen and (min-width: 36em) {
+  .louie {
+    margin-top: 9.375rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .louie {
+    margin-top: 10.625rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .louie {
+    margin-top: 11.875rem;
+  }
+}
+.louie__rightWrapper {
+  margin-top: 3.125rem !important;
+}
+@media only screen and (min-width: 48em) {
+  .louie__rightWrapper {
+    margin-top: 0 !important;
+  }
+}
+
+.louie-counter {
+  margin-top: 8.75rem;
+}
+@media only screen and (min-width: 36em) {
+  .louie-counter {
+    margin-top: 10.625rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .louie-counter {
+    margin-top: 12.5rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .louie-counter {
+    margin-top: 14.375rem;
+  }
+}
+.louie-counter__heading {
+  font-size: 3.5rem !important;
+  margin-top: 1.875rem;
+}
+@media only screen and (min-width: 36em) {
+  .louie-counter__heading {
+    font-size: 4.5rem !important;
+    margin-top: 3.125rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .louie-counter__heading {
+    font-size: 5.5rem !important;
+    margin-top: 3.125rem;
+  }
+}
+.louie-counter__para {
+  padding-inline: 1.25em;
+  text-align: center;
+}
+
+.louie-rofiling {
+  margin-top: 7.5rem;
+}
+@media only screen and (min-width: 36em) {
+  .louie-rofiling {
+    margin-top: 9.375rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .louie-rofiling {
+    margin-top: 11.25rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .louie-rofiling {
+    margin-top: 13.4375rem;
+  }
+}
+
+.philosophy {
+  margin-top: 8.125rem;
+}
+@media only screen and (min-width: 48em) {
+  .philosophy {
+    margin-top: 9.375rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .philosophy {
+    margin-top: 10.625rem;
+  }
+}
+
+.awards {
+  margin-top: 1.875rem;
+}
+@media only screen and (min-width: 48em) {
+  .awards {
+    margin-top: 3.125rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .awards {
+    margin-top: 4.375rem;
+  }
 }
 
 .header {
@@ -12822,6 +12948,9 @@ button.disable[type=submit] {
   font-size: 1.125rem;
   color: #ffffff;
   line-height: 2.25rem;
+}
+.footer__link {
+  transition: all 0.4s ease-in-out;
 }
 .footer__link:hover {
   color: #e4e4e1;
