@@ -1,0 +1,133 @@
+@use "../abstract/fonts";
+@use "../abstract/colors" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+.contact--hero{
+    background-image: url("../../../app//assets/img/contact/Depositphotos_hero.webp");
+    @include background-cover;
+    background-position: center bottom;
+    // position: relative;
+}
+
+.contact{
+    margin-top: rem(105);
+
+    @include breakpoint-sm{
+        margin-top: rem(145);
+    }
+    @include breakpoint-md{
+        margin-top: rem(185);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(225);
+    }
+
+    &__wrapper--form{
+        margin-top: rem(40) !important;
+    }
+
+    &__heading{
+        margin-top: 40px;
+        @include breakpoint-sm{
+            margin-top: 0;
+        }
+    }
+
+}
+
+.connect{
+    background-image: url("../../../app//assets/img/contact/connect-bg.svg");
+    @include background-cover;
+    background-position: center top;
+    margin-top: rem(100);
+    padding-top: em(230);
+    padding-bottom: em(100);
+
+    @include breakpoint-md{
+        margin-top: rem(120);
+        padding-top: em(200);
+        padding-bottom: em(100);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(140);
+        padding-top: em(200);
+        padding-bottom: em(100);
+    }
+
+    &__wrapper{
+        margin-top: rem(48) !important;
+
+        @include breakpoint-sm{
+            margin-top: 0 !important;
+        }
+    }
+
+    &__icon-box{
+        width: rem(65);
+        height: rem(65);
+        object-fit: contain;
+        background-color: $clr-white;
+        @include flex-center;
+        @include border-radius(50%);
+        @include transition(all, 0.4s, ease-in-out);
+
+        @include breakpoint-md{
+            width: rem(75);
+            height: rem(75);
+        }
+        @include breakpoint-lg{
+            width: rem(90);
+            height: rem(90);
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color: $clr-secondary;
+
+            .svg-path{
+                fill:white;
+            }
+        }
+    }
+
+    &__social-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:rem(45);
+        margin-top: rem(33);  
+    }
+
+    &__social-link{
+        @include transition(all, 0.4s, ease-in-out);
+
+        &:hover{
+            cursor: pointer;
+            .social--link{
+                transform:scale(1.1);
+                fill:$clr-secondary;
+            }
+        }
+    }
+
+    &__item{
+        display:inline-block;
+        margin-top: rem(33);
+    }
+    &__address{
+        padding-inline: rem(70);
+    }
+
+}
+
+.map{
+    height: 607px;
+
+    &__google-map{
+        height: 100%;
+    }
+}
+
+// transform:scale(1.1);

@@ -82,12 +82,17 @@
         top: 50%;
         left: 50%;
         transform:translate(-50%,-50%);
-        width: rem(80);
-        height: rem(80);
+        width: rem(65);
+        height: rem(65);
         display: block;
         background-color: $clr-white;
         @include flex-center;
         @include border-radius(50%);
+
+        @include breakpoint-md{
+            width: rem(80);
+            height: rem(80);
+        }
         @include breakpoint-lg{
             width: rem(109);
             height: rem(109);
@@ -206,12 +211,16 @@
     }
 
     &__thumbnail{
-      width: rem(120);
-      height: rem(120);
+      width: rem(105);
+      height: rem(105);
       border:2px solid $clr-primary;
       background-color:$clr-white;
       @include border-radius(50%);
 
+      @include breakpoint-sm{
+        width: rem(120);
+        height: rem(120);
+      }
       @include breakpoint-md{
         width: rem(150);
         height: rem(150);
@@ -225,13 +234,17 @@
     gap: rem(32);
 
     &__common{
-        width: rem(60);
-        height: rem(60);
+        width: rem(40);
+        height: rem(40);
         border:2px solid $clr-primary !important;
         background-color: $clr-white !important;
         @include border-radius(50%);
         @include transition(all, 0.35s, ease-in-out);
 
+        @include breakpoint-sm{
+            width: rem(50);
+            height: rem(50);
+        }
         @include breakpoint-md{
             width: rem(60);
             height: rem(60);
@@ -243,6 +256,17 @@
     
             .arrow__svg--path{
                 fill:$clr-white;
+            }
+        }
+
+        svg{
+            width: rem(20);
+
+            @include breakpoint-sm{
+                width: rem(25);
+            }
+            @include breakpoint-md{
+                width: rem(30);
             }
         }
     }

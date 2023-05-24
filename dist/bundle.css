@@ -11836,14 +11836,20 @@ button.disable[type=submit] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 5rem;
-  height: 5rem;
+  width: 4.0625rem;
+  height: 4.0625rem;
   display: block;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+@media only screen and (min-width: 48em) {
+  .video__action {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 @media only screen and (min-width: 62em) {
   .video__action {
@@ -11957,11 +11963,17 @@ button.disable[type=submit] {
   font-size: 1.25rem;
 }
 .testimonial__thumbnail {
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 6.5625rem;
+  height: 6.5625rem;
   border: 2px solid #22b3c6;
   background-color: #ffffff;
   border-radius: 50%;
+}
+@media only screen and (min-width: 36em) {
+  .testimonial__thumbnail {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
 }
 @media only screen and (min-width: 48em) {
   .testimonial__thumbnail {
@@ -11977,12 +11989,18 @@ button.disable[type=submit] {
   gap: 2rem;
 }
 .arrow__common {
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 2px solid #22b3c6 !important;
   background-color: #ffffff !important;
   border-radius: 50%;
   transition: all 0.35s ease-in-out;
+}
+@media only screen and (min-width: 36em) {
+  .arrow__common {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
 }
 @media only screen and (min-width: 48em) {
   .arrow__common {
@@ -11996,6 +12014,19 @@ button.disable[type=submit] {
 }
 .arrow__common:hover .arrow__svg--path {
   fill: #ffffff;
+}
+.arrow__common svg {
+  width: 1.25rem;
+}
+@media only screen and (min-width: 36em) {
+  .arrow__common svg {
+    width: 1.5625rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .arrow__common svg {
+    width: 1.875rem;
+  }
 }
 
 .FAQs {
@@ -12094,6 +12125,14 @@ button.disable[type=submit] {
     text-align: left;
   }
 }
+.about__heading {
+  margin-top: 1.875rem;
+}
+@media only screen and (min-width: 36em) {
+  .about__heading {
+    margin-top: 0;
+  }
+}
 .about__desc {
   line-height: 1.57;
   text-align: left;
@@ -12146,14 +12185,26 @@ button.disable[type=submit] {
   position: relative;
 }
 .steps-neuro__step {
-  width: 117px;
-  height: 117px;
+  width: 5.625rem;
+  height: 5.625rem;
   background-color: #22b3c6;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   position: relative;
+}
+@media only screen and (min-width: 36em) {
+  .steps-neuro__step {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+@media only screen and (min-width: 36em) {
+  .steps-neuro__step {
+    width: 7.3125rem;
+    height: 7.3125rem;
+  }
 }
 
 @media only screen and (min-width: 62em) {
@@ -12182,6 +12233,139 @@ button.disable[type=submit] {
   background-size: cover;
   background-position: center center;
   height: 607px;
+}
+
+.contact--hero {
+  background-image: url("../../../app//assets/img/contact/Depositphotos_hero.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-position: center bottom;
+}
+
+.contact {
+  margin-top: 6.5625rem;
+}
+@media only screen and (min-width: 36em) {
+  .contact {
+    margin-top: 9.0625rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .contact {
+    margin-top: 11.5625rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .contact {
+    margin-top: 14.0625rem;
+  }
+}
+.contact__wrapper--form {
+  margin-top: 2.5rem !important;
+}
+.contact__heading {
+  margin-top: 40px;
+}
+@media only screen and (min-width: 36em) {
+  .contact__heading {
+    margin-top: 0;
+  }
+}
+
+.connect {
+  background-image: url("../../../app//assets/img/contact/connect-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-position: center top;
+  margin-top: 6.25rem;
+  padding-top: 14.375em;
+  padding-bottom: 6.25em;
+}
+@media only screen and (min-width: 48em) {
+  .connect {
+    margin-top: 7.5rem;
+    padding-top: 12.5em;
+    padding-bottom: 6.25em;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .connect {
+    margin-top: 8.75rem;
+    padding-top: 12.5em;
+    padding-bottom: 6.25em;
+  }
+}
+.connect__wrapper {
+  margin-top: 3rem !important;
+}
+@media only screen and (min-width: 36em) {
+  .connect__wrapper {
+    margin-top: 0 !important;
+  }
+}
+.connect__icon-box {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+@media only screen and (min-width: 48em) {
+  .connect__icon-box {
+    width: 4.6875rem;
+    height: 4.6875rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .connect__icon-box {
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+.connect__icon-box:hover {
+  cursor: pointer;
+  background-color: #ea9a27;
+}
+.connect__icon-box:hover .svg-path {
+  fill: white;
+}
+.connect__social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.8125rem;
+  margin-top: 2.0625rem;
+}
+.connect__social-link {
+  transition: all 0.4s ease-in-out;
+}
+.connect__social-link:hover {
+  cursor: pointer;
+}
+.connect__social-link:hover .social--link {
+  transform: scale(1.1);
+  fill: #ea9a27;
+}
+.connect__item {
+  display: inline-block;
+  margin-top: 2.0625rem;
+}
+.connect__address {
+  padding-inline: 4.375rem;
+}
+
+.map {
+  height: 607px;
+}
+.map__google-map {
+  height: 100%;
 }
 
 .header {
@@ -12448,6 +12632,31 @@ button.disable[type=submit] {
 .form__textarea {
   background: transparent;
   resize: none;
+}
+.form__radio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem !important;
+}
+@media only screen and (min-width: 48em) {
+  .form__radio-wrapper {
+    margin-top: 0 !important;
+  }
+}
+.form__radio-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.form__radio-group .radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #22b3c6 !important;
+}
+.form__radio-group .radio:hover {
+  cursor: pointer;
 }
 
 .swiper-button-next, .swiper-button-prev {

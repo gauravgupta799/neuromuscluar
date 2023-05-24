@@ -32,6 +32,13 @@
         }
     }
 
+    &__heading{
+        margin-top: rem(30);
+        @include breakpoint-sm{
+            margin-top:0;
+        }
+    }
+
     &__desc{
         line-height: 1.57;
         text-align: left;
@@ -75,12 +82,21 @@
     position:relative;
 
     &__step{
-        width: 117px;
-        height: 117px;
+        width: rem(90);
+        height: rem(90);
         background-color: $clr-primary;
         @include flex-center;
         @include border-radius(50%);
         position:relative;
+
+        @include breakpoint-sm{
+            width: rem(100);
+            height: rem(100);
+        }
+        @include breakpoint-sm{
+            width: rem(117);
+            height: rem(117);
+        }
     } 
 }
 

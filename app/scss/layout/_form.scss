@@ -44,7 +44,6 @@
             font-family:"FutuBK" !important;
         }
     }
-
     &__textarea--wrapper{
         height: rem(164) !important;
         width: 100%;
@@ -65,4 +64,30 @@
         background: transparent;
         resize:none;
     }
+
+    &__radio-wrapper{
+        @include flex-center;  
+        margin-top: rem(20) !important;
+
+        @include breakpoint-md{
+            margin-top: 0 !important; 
+        }
+    }
+
+    &__radio-group{
+        @include flex-center;
+        gap: rem(16);
+
+        .radio{
+           width: 20px;
+           height: 20px;
+           border:2px solid $clr-primary !important;
+
+           &:hover{
+            cursor: pointer;
+           }
+        }
+    }
+
+    
 }
