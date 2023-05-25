@@ -12482,6 +12482,7 @@ button.disable[type=submit] {
 
 .awards {
   margin-top: 1.875rem;
+  mix-blend-mode: multiply;
 }
 @media only screen and (min-width: 48em) {
   .awards {
@@ -12770,19 +12771,46 @@ button.disable[type=submit] {
     margin-top: 0 !important;
   }
 }
-.form__radio-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+
+input[type=radio] {
+  display: none;
 }
-.form__radio-group .radio {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #22b3c6 !important;
-}
-.form__radio-group .radio:hover {
+
+input[type=radio] + label {
+  position: relative;
+  padding-left: 40px;
   cursor: pointer;
+}
+
+input[type=radio] + label::before,
+input[type=radio] + label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+input[type=radio] + label::before {
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border: solid 2px #22b3c6;
+  background-color: #ffffff;
+}
+
+input[type=radio] + label::after {
+  left: 8.3%;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #ea9a27;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input[type=radio]:checked + label::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .swiper-button-next, .swiper-button-prev {

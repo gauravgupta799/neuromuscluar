@@ -92,6 +92,7 @@
 
 .awards{
     margin-top: rem(30);
+    mix-blend-mode: multiply;
 
     @include breakpoint-md{
         margin-top: rem(50);
