@@ -4,6 +4,11 @@
 @use "../abstract/mixins" as *;
 
 .header{
+    position:sticky;
+    top:0;
+    left: 0;
+    z-index:9999;
+    width: 100%;
     padding-block: rem(20);
     @include transition(all, 0.3s, ease);
 
@@ -66,12 +71,10 @@
     }
 
     &.sticky{
-        position:fixed;
-        z-index:9999;
         width:100%;
         background-color: $clr-body;
         box-shadow: 0 2px 5px rgba(57, 63, 72, 0.3);
-        @include transition(all, 0.3s, ease);
+        @include transition(all, 0.4s, ease-in-out);
 
     }
 }
