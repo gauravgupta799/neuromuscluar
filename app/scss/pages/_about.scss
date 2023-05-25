@@ -78,6 +78,17 @@
     }
 }
 
+.steps__box{
+    margin-top: rem(90) !important;
+
+    @include breakpoint-md{
+        margin-top: rem(120) !important;
+    }
+    @include breakpoint-lg{
+        margin-top: rem(150) !important;
+    }
+}
+
 .steps-neuro{
     position:relative;
 
@@ -104,7 +115,7 @@
 
     @include breakpoint-lg{
         position: absolute;
-        top: 34%;
+        top: 40%;
         width: 60%;
         left: 22%;
         height: 3px;

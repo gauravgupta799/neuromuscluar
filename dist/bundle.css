@@ -12181,6 +12181,20 @@ button.disable[type=submit] {
   }
 }
 
+.steps__box {
+  margin-top: 5.625rem !important;
+}
+@media only screen and (min-width: 48em) {
+  .steps__box {
+    margin-top: 7.5rem !important;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .steps__box {
+    margin-top: 9.375rem !important;
+  }
+}
+
 .steps-neuro {
   position: relative;
 }
@@ -12210,7 +12224,7 @@ button.disable[type=submit] {
 @media only screen and (min-width: 62em) {
   .horizontal--line {
     position: absolute;
-    top: 34%;
+    top: 40%;
     width: 60%;
     left: 22%;
     height: 3px;
@@ -12492,6 +12506,98 @@ button.disable[type=submit] {
 @media only screen and (min-width: 62em) {
   .awards {
     margin-top: 4.375rem;
+  }
+}
+
+.session {
+  margin-top: 7.5rem;
+}
+@media only screen and (min-width: 36em) {
+  .session {
+    margin-top: 10.625rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .session {
+    margin-top: 13.125rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .session {
+    margin-top: 15.625rem;
+  }
+}
+.session__imgWrapper {
+  margin-top: 5.625rem !important;
+}
+@media only screen and (min-width: 48em) {
+  .session__imgWrapper {
+    margin-top: 8.125rem !important;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .session__imgWrapper {
+    margin-top: 10rem !important;
+  }
+}
+
+.Why-neuromuscular--typical {
+  margin-top: 7.5rem;
+}
+@media only screen and (min-width: 36em) {
+  .Why-neuromuscular--typical {
+    margin-top: 14.0625rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .Why-neuromuscular--typical {
+    margin-top: 17.1875rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .Why-neuromuscular--typical {
+    margin-top: 20.3125rem;
+  }
+}
+
+.benifits--typical {
+  background-image: url("../../../app/assets/img/typical-session/benifits-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10.625rem;
+  height: 54.375rem;
+}
+@media only screen and (min-width: 36em) {
+  .benifits--typical {
+    margin-top: 13.75rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .benifits--typical {
+    margin-top: 16.875rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .benifits--typical {
+    margin-top: 20rem;
+  }
+}
+.benifits--typical__contents {
+  margin-top: 3.75rem !important;
+}
+@media only screen and (min-width: 48em) {
+  .benifits--typical__contents {
+    margin-top: 5.625rem !important;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .benifits--typical__contents {
+    margin-top: 7.5rem !important;
   }
 }
 

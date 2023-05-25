@@ -1,0 +1,78 @@
+@use "../abstract/fonts";
+@use "../abstract/colors" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+
+.typical--hero{
+
+}
+
+.session{
+    margin-top: rem(120);
+
+    @include breakpoint-sm{
+        margin-top: rem(170);
+    }
+    @include breakpoint-md{
+        margin-top: rem(210);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(250);
+    }
+
+    &__imgWrapper{
+        margin-top: rem(90) !important;
+
+        @include breakpoint-md{
+            margin-top: rem(130) !important;
+        }
+        @include breakpoint-lg{
+            margin-top: rem(160) !important;
+        }
+    }
+}
+
+.Why-neuromuscular--typical{
+    margin-top: rem(120);
+
+    @include breakpoint-sm{
+        margin-top: rem(225);
+    }
+    @include breakpoint-md{
+        margin-top: rem(275);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(325);
+    }
+}
+
+.benifits--typical{
+    background-image: url("../../../app/assets/img/typical-session/benifits-bg.svg");
+    @include background-cover;
+    background-position: center top;
+    @include flex-center;
+    margin-top: rem(170);
+    height: rem(870);
+
+    @include breakpoint-sm{
+        margin-top: rem(220);
+    }
+    @include breakpoint-md{
+        margin-top: rem(270);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(320);
+    }
+
+    &__contents{
+        margin-top: rem(60) !important;
+        @include breakpoint-md{
+            margin-top: rem(90) !important;
+        }
+        @include breakpoint-lg{
+            margin-top: rem(120) !important;
+        }
+    }
+}
