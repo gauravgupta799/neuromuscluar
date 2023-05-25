@@ -16,7 +16,6 @@ window.onload = () =>{
   loader.style.display = "none";
 }
 
-
 // Sticky header
 window.addEventListener("scroll", () => {
     if (window.scrollY > 10) {
@@ -55,7 +54,6 @@ if(playBtn != null && pauseBtn != null){
   })
 }
 
-
 // Counter
 let counterNum = 0;
 function updateCounteringNum(){
@@ -69,9 +67,6 @@ function handleScroll(){
 }
 window.addEventListener('scroll', handleScroll);
 
-
-
-
 // Testimonial Swiper
 var swiper = new Swiper(".mySwiper",{
   slidesPerView:1,
@@ -83,7 +78,6 @@ var swiper = new Swiper(".mySwiper",{
   },
 })
 
-
 // Form group
 formGroup.forEach((item)=>{
   item.addEventListener("focusin", ()=>{
@@ -93,3 +87,4 @@ formGroup.forEach((item)=>{
     item.classList.remove("isBorder");
   })
 })
+

@@ -1,0 +1,67 @@
+@use "../abstract/fonts";
+@use "../abstract/colors" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+.integration--hero{
+    background-image: url("../../../app//assets/img/s-integration/typical-session-neuromuscular-therapy-san-diego04.svg");
+    @include background-cover;
+    background-position: center bottom;
+    position: relative;
+}
+
+.sessions{
+    margin-top: rem(120);
+
+    @include breakpoint-md{
+        margin-top: rem(150);
+    }
+    @include breakpoint-md{
+        margin-top: rem(180);
+    }
+
+    &__tabWrapper , &__contentWrapper{
+       margin-top: rem(40) !important;
+
+       @include breakpoint-md{
+            margin-top:0 !important;
+        }
+    }
+
+    &__tab{
+        .h-line{
+            margin-block: rem(25);
+
+            @include breakpoint-md{
+                margin-block: rem(45);
+            }
+            @include breakpoint-lg{
+                margin-block: rem(65);
+            }
+        }
+    }
+
+    &__content{
+        margin-bottom: rem(40);
+
+        @include breakpoint-md{
+            margin-bottom: rem(60);
+        }
+        @include breakpoint-md{
+            margin-bottom: rem(80);
+        }
+
+        .content-heading{
+            font-family:"FutuBK";
+        }
+    }
+}
+
+.check_wrapper{
+    width: rem(48);
+    height: rem(48);
+    background-color: $clr-white;
+    @include flex-center;
+    @include border-radius(50%);
+}

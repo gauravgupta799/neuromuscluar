@@ -54,7 +54,7 @@
     background-position: center top;
     @include flex-center;
     margin-top: rem(170);
-    height: rem(870);
+    padding-block: 180px 150px;
 
     @include breakpoint-sm{
         margin-top: rem(220);
@@ -63,7 +63,7 @@
         margin-top: rem(270);
     }
     @include breakpoint-lg{
-        margin-top: rem(320);
+        margin-top: rem(320); 
     }
 
     &__contents{

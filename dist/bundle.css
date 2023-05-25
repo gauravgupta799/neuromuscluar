@@ -379,6 +379,10 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   color: #22b3c6;
 }
 
+.text-secondary {
+  color: #ea9a27;
+}
+
 .text-black {
   color: #000;
 }
@@ -11655,6 +11659,7 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .btn--nav {
   background-color: #22b3c6;
   border: 2px solid #22b3c6;
+  padding: 16px 48px !important;
 }
 .btn--nav:hover {
   background: transparent;
@@ -12570,7 +12575,7 @@ button.disable[type=submit] {
   justify-content: center;
   align-items: center;
   margin-top: 10.625rem;
-  height: 54.375rem;
+  padding-block: 180px 150px;
 }
 @media only screen and (min-width: 36em) {
   .benifits--typical {
@@ -12601,19 +12606,83 @@ button.disable[type=submit] {
   }
 }
 
+.integration--hero {
+  background-image: url("../../../app//assets/img/s-integration/typical-session-neuromuscular-therapy-san-diego04.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-position: center bottom;
+  position: relative;
+}
+
+.sessions {
+  margin-top: 7.5rem;
+}
+@media only screen and (min-width: 48em) {
+  .sessions {
+    margin-top: 9.375rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .sessions {
+    margin-top: 11.25rem;
+  }
+}
+.sessions__tabWrapper, .sessions__contentWrapper {
+  margin-top: 2.5rem !important;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__tabWrapper, .sessions__contentWrapper {
+    margin-top: 0 !important;
+  }
+}
+.sessions__tab .h-line {
+  margin-block: 1.5625rem;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__tab .h-line {
+    margin-block: 2.8125rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .sessions__tab .h-line {
+    margin-block: 4.0625rem;
+  }
+}
+.sessions__content {
+  margin-bottom: 2.5rem;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__content {
+    margin-bottom: 3.75rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .sessions__content {
+    margin-bottom: 5rem;
+  }
+}
+.sessions__content .content-heading {
+  font-family: "FutuBK";
+}
+
+.check_wrapper {
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
 .header {
   position: sticky;
   top: 0;
   left: 0;
   z-index: 9999;
   width: 100%;
-  padding-block: 1.25rem;
-  transition: all 0.3s ease;
-}
-@media only screen and (min-width: 48em) {
-  .header {
-    padding-block: 1.5rem;
-  }
+  padding-block: 0.625em;
 }
 .header__container {
   display: flex;
@@ -12683,7 +12752,6 @@ button.disable[type=submit] {
   width: 100%;
   background-color: #fcfbf5;
   box-shadow: 0 2px 5px rgba(57, 63, 72, 0.3);
-  transition: all 0.4s ease-in-out;
 }
 
 .header-wrapper--mobile {
