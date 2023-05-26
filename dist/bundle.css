@@ -12193,6 +12193,7 @@ button.disable[type=submit] {
 }
 
 .steps__box {
+  position: relative;
   margin-top: 5.625rem !important;
 }
 @media only screen and (min-width: 48em) {
@@ -12206,9 +12207,6 @@ button.disable[type=submit] {
   }
 }
 
-.steps-neuro {
-  position: relative;
-}
 .steps-neuro__step {
   width: 5.625rem;
   height: 5.625rem;
@@ -12235,9 +12233,9 @@ button.disable[type=submit] {
 @media only screen and (min-width: 62em) {
   .horizontal--line {
     position: absolute;
-    top: 40%;
+    top: 16%;
     width: 60%;
-    left: 22%;
+    left: 20%;
     height: 3px;
     background-color: #005e83;
   }
@@ -12258,6 +12256,10 @@ button.disable[type=submit] {
   background-size: cover;
   background-position: center center;
   height: 607px;
+}
+
+.stepper-wrapper {
+  position: relative;
 }
 
 .contact--hero {
@@ -12644,6 +12646,7 @@ button.disable[type=submit] {
 }
 .sessions__tab {
   opacity: 0.4;
+  transition: all 0.3s ease-in-out;
 }
 .sessions__tab .h-line {
   margin-block: 1.5625rem;

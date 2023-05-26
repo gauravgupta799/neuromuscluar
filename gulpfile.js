@@ -41,9 +41,16 @@ function scssTaskMinified(){
 //     'asset/js/main.js'
 // ]
 
+const jsFilesArray = [
+    "app/vendors/gsap/gsap.min.js",
+    "app/vendors/gsap/ScrollTrigger.min.js",
+    "app/js/main.js",
+]
+
+
 // javascript task
 function jsTask(){
-    return src("app/js/main.js", {sourcemaps:true})
+    return src(jsFilesArray, {sourcemaps:true})
     .pipe(concat('bundle.js'))
     .pipe(terser())
     .pipe(rename('bundle.min.js'))

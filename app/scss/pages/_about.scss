@@ -79,6 +79,7 @@
 }
 
 .steps__box{
+      position:relative;
     margin-top: rem(90) !important;
 
     @include breakpoint-md{
@@ -90,7 +91,7 @@
 }
 
 .steps-neuro{
-    position:relative;
+    // position:relative;
 
     &__step{
         width: rem(90);
@@ -115,9 +116,9 @@
 
     @include breakpoint-lg{
         position: absolute;
-        top: 40%;
+        top: 16%;
         width: 60%;
-        left: 22%;
+        left: 20%;
         height: 3px;
         background-color:$clr-line;
     }
@@ -134,4 +135,8 @@
     background-image: url("../../../app//assets/img/about/rolfing-san-diego-benifit.webp");
     @include background-cover;
     height: 607px;
+}
+
+.stepper-wrapper{
+    position: relative;
 }
