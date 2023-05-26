@@ -11802,6 +11802,11 @@ button.disable[type=submit] {
   position: absolute;
   z-index: 1;
 }
+@media only screen and (min-width: 100em) {
+  .hero__container {
+    margin-top: -7.1875rem;
+  }
+}
 .hero__heading {
   font-family: "Unbounded bold";
 }
@@ -13019,6 +13024,7 @@ input[type=radio]:checked + label::after {
 
 .page-loader {
   position: fixed;
+  inset: 0;
   width: 100%;
   height: 100vh;
   z-index: 9999999;
@@ -13180,7 +13186,7 @@ input[type=radio]:checked + label::after {
   color: #e4e4e1;
 }
 .footer__address {
-  width: 13.125rem;
+  width: 14.0625rem;
 }
 .footer__privacy {
   display: flex;
