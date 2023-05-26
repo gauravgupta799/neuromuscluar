@@ -1,0 +1,100 @@
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+
+
+.popup--main{
+    margin-block: 4rem;
+}
+// .popup--container{
+//     margin-inline: rem(187);
+// }
+
+.popup{
+        position: fixed;
+        inset: 0;
+        z-index:9999999999;
+        overflow: auto; 
+        // opacity: 0;
+        // visibility: hidden;
+        @include transition(all, 0.5s ease-in-out);
+
+    &__card{
+        border:1px solid $clr-black;
+        background-color: $clr-white;
+        width: rem(995);
+        max-width:100%;
+        // height: rem(562);
+        margin: 0 auto;
+        position: relative;
+    }
+    &__cancel{
+        width: rem(30);
+        height: rem(30);
+        background-color:$clr-primary--light;
+        @include border-radius(50%);
+        @include flex-center;
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        @include transition(all, 0.4s, ease-in-out);
+
+        &:hover{
+            cursor:pointer;
+            background-color:$clr-primary;
+        }
+    }
+    &__card-body{
+        padding: em(40) em(10) em(80) em(10) !important;
+
+        @include breakpoint-sm{
+            padding: em(40) em(30) em(80) em(30) !important;
+        }
+        @include breakpoint-md{
+            padding: em(40) em(60) em(80) em(60) !important;
+        }
+        @include breakpoint-lg{
+            padding: em(40) em(112) em(80) em(62) !important;
+        }
+    }
+}
+
+// .popup.is-open{
+//     opacity: 1;
+//     visibility: visible;
+// }
+
+.stars-wrapper{
+    margin-left: rem(10);
+}
+
+.star{
+    color:$clr-secondary;
+}
+
+.or-text{
+    width: 100%;
+    text-align: center;
+    margin-top: rem(25);
+    margin-bottom: rem(9);
+    position:relative;
+    font-size: rem(18);
+    @include flex-center;
+
+    &::before, &::after{
+        content: " ";
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        display: inline-block;
+        background-color: $clr-border;
+    }
+    &::before{
+        left: 0;
+    }
+    &::after{
+        right: 0;
+    }
+}

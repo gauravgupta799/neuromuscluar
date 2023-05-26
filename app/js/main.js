@@ -88,3 +88,23 @@ formGroup.forEach((item)=>{
   })
 })
 
+// Tabs
+// const tab = document.querySelectorAll("sessions__tab");
+
+function openTab(evt, tabNum){
+  var i, tabContent, tablinks;
+
+  tabContent = document.getElementsByClassName("sessions__contentWrapper");
+
+  for(i=0; i< tabContent.length; i++){
+    tabContent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("sessions__tab");
+  for(i=0; i< tablinks.length; i++){
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabNum).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();

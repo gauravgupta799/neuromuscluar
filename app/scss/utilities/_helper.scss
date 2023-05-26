@@ -48,6 +48,10 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
   text-decoration: underline;   
 }
 
+.bg--primary{
+    background-color: $clr-primary;
+}
+
 .secondary--para{
     line-height: 1.57;
     font-size: rem(20) !important;
@@ -77,4 +81,8 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 .img-cover{
     width:100%;
     object-fit:cover;
+}
+
+.h--100{
+    height: 100%;
 }

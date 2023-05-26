@@ -16,6 +16,7 @@
     @include transition(all,0.35s,ease-in-out);
    
     &:hover{
+        background:transparent;
         cursor:pointer;
     }
 
@@ -29,7 +30,7 @@
     border:2px solid $clr-secondary;
 
     &:hover{
-        background:transparent;
+        // background:transparent;
         color:$clr-secondary;
     }
 }
@@ -40,7 +41,7 @@
     padding:16px 48px !important;
 
     &:hover{
-        background:transparent;
+        // background:transparent;
         color:$clr-primary;
     }
 }
@@ -50,7 +51,7 @@
     border:2px solid $clr-secondary;
 
     &:hover{
-        background:transparent;
+        // background:transparent;
         color:$clr-secondary;
     }
 }

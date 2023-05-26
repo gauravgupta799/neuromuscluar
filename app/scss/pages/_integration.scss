@@ -30,6 +30,8 @@
     }
 
     &__tab{
+        opacity: 0.4;
+
         .h-line{
             margin-block: rem(25);
 
@@ -39,6 +41,14 @@
             @include breakpoint-lg{
                 margin-block: rem(65);
             }
+        }
+
+        &:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        &.active{
+            opacity: 1;
         }
     }
 
