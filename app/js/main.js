@@ -9,7 +9,7 @@ const overlay = document.querySelector(".overlay")
 const video = document.querySelector(".video__video-tag");
 const playBtn = document.querySelector(".video__play");
 const pauseBtn = document.querySelector(".video__pause");
-const counter = document.querySelector(".count-digit")
+const count = document.querySelectorAll(".count")
 
 //====== Pre-loader start ======
 window.onload = () =>{
@@ -62,6 +62,52 @@ if(playBtn != null && pauseBtn != null){
 
 
 //====== Counter start ======
+const nums = document.querySelectorAll(".count");
+const statsSection = document.querySelector(".rolfing");
+let started = false;
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY >= statsSection.offsetTop){
+    if(!started){
+      nums.forEach((num) =>startCounter(num));
+    }
+    started = true;
+  }
+})
+
+function startCounter(el){
+  let goal = el.dataset.val;
+  let count = setInterval(() =>{
+    let elem = el.textContent++;
+    // el.innerText = `${elem}+`
+    if(elem == goal) {
+      clearInterval(count);
+    }
+  },2000/goal);
+}
+
+// let arr = Array.from(count);
+
+// arr.map(function(item){
+//   let startNum = 0;
+//   let stop;
+//   function counterUp(){
+//     startNum++;
+//     item.innerHTML = `${startNum}+`;
+//     if(startNum == item.dataset.val){
+//       clearInterval(stop);
+//     }
+//   }
+
+//   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+//     stop = setInterval(()=>{
+//       counterUp();
+//     }, 50);
+//   }
+// })
+
+
+
 // let counterNum = 0;
 // function updateCounteringNum(){
 //   counterNum++;
@@ -132,14 +178,14 @@ fadeIn.forEach((mainContent, i) => {
   const anim = gsap.fromTo(
     mainContent,
     { opacity: 0 },
-    { duration: 1.2, opacity: 1, stagger: 0.5 }
+    { duration: 0.8, opacity: 1, stagger: 0.5 }
   );
   ScrollTrigger.create({
     trigger: mainContent,
     animation: anim,
     toggleActions: "play",
     once: true,
-    duration: 1.2,
+    duration: 0.8,
     ease: Power4.easeOut,
   });
 });
@@ -150,14 +196,14 @@ textContainers.forEach((item, i) => {
   const anim = gsap.fromTo(
     item,
     { opacity: 0, y: "15%" },
-    { duration: 1.2, opacity: 1, y: 0 }
+    { duration: 0.8, opacity: 1, y: 0 }
   );
   ScrollTrigger.create({
     trigger: item,
     animation: anim,
     toggleActions: "play",
     once: true,
-    duration:1.2,
+    duration:0.8,
     stagger:0.1,
     ease: Power4.easeOut,
   });
@@ -170,17 +216,111 @@ cardContainers.forEach((item, i) => {
   const anim = gsap.fromTo(
     item,
     { opacity: 0, y: "10%" },
-    { duration: 2, opacity: 1, y: 0 }
+    { duration: 1, opacity: 1, y: 0 }
   );
   ScrollTrigger.create({
     trigger: item,
     animation: anim,
     toggleActions: "play",
     once: true,
-    duration: 2,
+    duration: 1,
     stagger:0.1,
     ease: Power4.easeOut,
   });
 });
 
 //====== Animation end ======
+
+
+//====== Gallary Image start ======
+
+// hover an image
+$(".img-wrapper").hover(
+  function(){
+    $(this).find(".img-overlay").animate({ opacity: 1}, 600);
+  }, 
+  function(){
+    $(this).find(".img-overlay").animate({ opacity:0}, 600);
+  }
+);
+
+// Lightbox
+var $overlay = $('<div id = "overlay"></div>');
+var $image = $("<img>");
+var $prevButton = $('<div id = "prevButton"><i class="fa fa-chevron-left"></i></div>');
+var $nextButton = $('<div id = "nextButton"><i class="fa fa-chevron-right"></i></div>');
+var $exitButton = $('<div id = "exitButton"><i class="fa fa-times"></i></div>');
+
+// Add Overlay
+$overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
+$(".gallary").append($overlay);
+
+// Hide overlay on default
+$overlay.hide();
+
+// When an image is clicked
+$(".img-overlay").click(function(e) {
+  // prevents default behaviour
+  e.preventDefault();
+  // Add href attribute to variable
+  var imageLocation = $(this).prev().attr("src");
+  // Add the image src to $image
+  $image.attr('src', imageLocation);
+  // Fade in the overlay
+  $overlay.fadeIn("slow");
+});
+
+// When the overlay is clicked
+$overlay.click(function(e) {
+  // Fade out the overlay
+  $(this).fadeOut("slow");
+});
+
+// When next button is clicked
+$nextButton.click(function(event) {
+  // Hide the current image
+  $("#overlay img").hide();
+  // Overlay image location
+  var $currentImgSrc = $("#overlay img").attr("src");
+  console.log($currentImgSrc)
+  // Image with matching location of the overlay image
+  var $currentImg = $('.gallary--img img[src="' + $currentImgSrc + '"]');
+  // var $currentImg = $(`.gallary--img img[src=" ${$currentImgSrc} "]`);
+  console.log($currentImg)
+  // Finds the next image
+  var $nextImg = $($currentImg.closest(".image").next().find("img"));
+  // All of the images in the gallery
+  var $images = $(".gallary--img img");
+  // If there is a next image
+  if ($nextImg.length > 0) { 
+    // Fade in the next image
+    $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+  } else {
+    // Otherwise fade in the first image
+    $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(800);
+  }
+  // Prevents overlay from being hidden
+  event.stopPropagation();
+});
+
+// When previous button is clicked
+$prevButton.click(function(event) {
+  // Hide the current image
+  $("#overlay img").hide();
+  // Overlay image location
+  var $currentImgSrc = $("#overlay img").attr("src");
+  // Image with matching location of the overlay image
+  var $currentImg = $('.gallary--img img[src="' + $currentImgSrc + '"]');
+  // Finds the next image
+  var $nextImg = $($currentImg.closest(".image").prev().find("img"));
+  // Fade in the next image
+  $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+  // Prevents overlay from being hidden
+  event.stopPropagation();
+});
+
+// When the exit button is clicked
+$exitButton.click(function() {
+  // Fade out the overlay
+  $("#overlay").fadeOut("slow");
+});

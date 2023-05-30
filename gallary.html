@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/39784cd2b5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <link rel="stylesheet" href="dist/bundle.min.css">
     <link rel="shortcut icon" href="./app/assets/logos/main-logo.webp" type="image/x-icon" />
     <title>Neuromuscular | Gallary Page </title>
@@ -92,112 +94,253 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row g-2 mt-9 animate-fade-in-up">
-                        <div class="col-sm-6 col-md-8 col-lg-4 ">
-                            <img src="./app/assets/img/gallary/rolfing-san-diego4-1.webp" alt="" class="img-fluid img-cover h--100">
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-2">
-                            <img src="./app/assets/img/gallary/rolfing-san-diego2-1.webp" alt="" class="img-fluid img-cover h--100">
-                        </div>
-                        <div class="col-sm-6 col-md-8 col-lg-4">
-                            <img src="./app/assets/img/gallary/rolfing-san-diego4-2.webp" alt="" class="img-fluid img-cover h--100">
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-2">
-                            <img src="./app/assets/img/gallary/louie-profile2-2.webp" alt="" class="img-fluid img-cover h--100">
-                        </div>
-
-                        <div class="col-sm-6 col-md-4 col-lg-2">
-                            <img src="./app/assets/img/gallary/rolfing-san-diego2-1.webp" alt="" class="img-fluid img-cover h--100">
-                        </div>
-                        <div class="col-sm-6 col-md-8 col-lg-4">
-                            <img src="./app/assets/img/gallary/rolfing-san-diego4-3.webp" alt="" class="img-fluid img-cover h--100">
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-2">
-                            <img src="./app/assets/img/gallary/louie-profile2-2.webp" alt="" class="img-fluid img-cover h--100">
-                        </div>
-                        <div class="col-sm-6 col-md-8 col-lg-4">
-                            <img src="./app/assets/img/gallary/rolfing-san-diego4-4.webp" alt="" class="img-fluid img-cover h--100">
+                    <div class="gallary--img">
+                        <div class="row g-2 mt-9 animate-fade-in-up img-list">
+                            <div class="col-sm-6 col-md-8 col-lg-4 position-relative">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-1.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego2-1.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-8 col-lg-4">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-2.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/louie-profile2-2.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego2-1.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-8 col-lg-4">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-3.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/louie-profile2-2.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-8 col-lg-4">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-4.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
              </section>
+
+
+
+             <!-- <section class="gallary mt-7 mt-lg-11">
+                <div class="page-container">
+                    <div class="row g-0">
+                        <div class="col-sm-10 col-md-9 col-lg-6 m-auto text-center">
+                            <h2 class="text-primary text-capitalize animate-fade-in">
+                                Gallery ipsum dolor sit amet kwit ist
+                            </h2>
+                            <p class="animate-fade-in-up">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gallary--img">
+                        <div class="row g-2 mt-9 animate-fade-in-up img-list">
+                            <div class="col-sm-6 col-md-8 col-lg-4 position-relative">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-1.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego2-1.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-8 col-lg-4">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-2.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/louie-profile2-2.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego2-1.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-8 col-lg-4">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-3.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/louie-profile2-2.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-8 col-lg-4">
+                                <div class="img-wrapper">
+                                    <img src="./app/assets/img/gallary/rolfing-san-diego4-4.webp" alt="" class="img-fluid img-cover h--100 small-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section> -->
             <!-- Gallary section end -->
+     
+            <!-- <div class="popup">
+                <div class="popup__cancel"> 
+                    <svg data-v-6a943414="" width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+                        <path d="M6.414 5A1 1 0 1 0 5 6.414L10.586 12 5 17.586A1 1 0 1 0 6.414 19L12 13.414 17.586 19A1 1 0 1 0 19 17.586L13.414 12 19 6.414A1 1 0 1 0 17.586 5L12 10.586 6.414 5Z" fill="#ffffff">    
+                        </path>
+                    </svg>    
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-7 popup__card-body">
+                        <div class="popup__review-wrapper">
+                            <span class="popup__review">Reviewed</span>
+                            <span>4.6/5</span>
+                            <span class="">On Google</span>
+                            <span class="stars-wrapper">
+                                <span class="star">&starf;</span>
+                                <span class="star">&starf;</span>
+                                <span class="star">&starf;</span>
+                                <span class="star">&starf;</span>
+                                <span class="star">&starf;</span>
+                            </span>
+                        </div>
+                        <div class="popup__card-desc mt-3">
+                            <h5 class="text-primary text-capitalize">
+                                Book Your Free Consultation
+                            </h5>
+                            <p class="">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut.
+                            </p>
+                        </div> 
+                        <div class="d-inline-flex flex-column align-items-start justify-content-between">
+                            <a href="contact.html" role="button" class="btn btn--primary mt-5">
+                                Book Your Free Consultation
+                            </a>
+                            <span class="or-text">
+                            or
+                            </span>
+                            <a href="contact.html" role="button" class="btn bg--primary text-capitalize mt-3">
+                                talk to louie now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="" alt="" class="img-fluid img-cover h--100 large-image">
+                    </div>
+                </div>
+            </div> -->
+           
            
             <!-- FAQ start -->
             <section class="FAQs mt-10 mt-lg-15">
-                <div class="page-container">
-                    <div class="row g-0">
-                        <div class="col-sm-12 col-md-6">
-                            <h4 class="text-white text-uppercase animate-fade-in-up">
-                                FAQ<span class="text-lowercase">s</span>
-                            </h4>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="accordian animate-fade-in-up">
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle1">
-                                    <label for="toggle1" class="accordian__label">
-                                        Benefits of Structural Integration-1
-                                    </label>
-                                     <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p> 
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>                                 
-                                     
+                <div class="FAQs__top">
+                    <img src="./app/assets/img/home/bg.webp" alt="" class="img-fluid">
+                </div>
+                <div class="FAQs__bottom">
+                    <div class="page-container">
+                        <div class="row g-0">
+                            <div class="col-sm-12 col-md-6">
+                                <h4 class="text-white text-uppercase animate-fade-in-up">
+                                    FAQ<span class="text-lowercase">s</span>
+                                </h4>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="accordian animate-fade-in-up">
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle1">
+                                        <label for="toggle1" class="accordian__label">
+                                            Benefits of Structural Integration-1
+                                        </label>
+                                         <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p> 
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>                                 
+                                         
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle2">
-                                    <label for="toggle2" class="accordian__label">
-                                        Benefits of Structural Integration-2
-                                    </label>
-                                    <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p>
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>  
-                                     
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle2">
+                                        <label for="toggle2" class="accordian__label">
+                                            Benefits of Structural Integration-2
+                                        </label>
+                                        <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p>
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>  
+                                         
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle4">
-                                    <label for="toggle4" class="accordian__label">
-                                        Benefits of Structural Integration-3
-                                    </label>                           
-                                    <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p>
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>                                     
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle4">
+                                        <label for="toggle4" class="accordian__label">
+                                            Benefits of Structural Integration-3
+                                        </label>                           
+                                        <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p>
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>                                     
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle3">
-                                    <label for="toggle3" class="accordian__label">
-                                        Benefits of Structural Integration-4
-                                    </label>
-                                    <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p>
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>  
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle3">
+                                        <label for="toggle3" class="accordian__label">
+                                            Benefits of Structural Integration-4
+                                        </label>
+                                        <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p>
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>  
+                                        </div>
                                     </div>
-                                </div>
-                            </div>                        
+                                </div>                        
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -336,6 +479,22 @@
         <!-- scripts start -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="./dist/bundle.min.js"></script>
+        <!-- <script>
+            $(document).ready(function() {
+               $(".small-img").click(function() {
+                var path = $(this).attr('src');
+                console.log(path)
+
+                $(".large-image").attr('src', path);
+                $(".popup").show();
+                $(".popup").animate()
+
+                $(".popup__cancel").click(()=>{
+                    $(".popup").hide();
+                })
+               })
+            })
+        </script> -->
         <!-- scripts end -->
     </body>
 </html>

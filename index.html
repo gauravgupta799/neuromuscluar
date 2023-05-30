@@ -65,6 +65,9 @@
                             <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                             <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
                             <li class="nav__item"><a href="meet-louie.html" class="nav__link">Meet Louie</a></li>
+                            <li class="nav__item"><a href="gallary.html" class="nav__link">Gallary</a></li>
+                            <li class="nav__item"><a href="typical-session.html" class="nav__link">Typical Session</a></li>
+                            <li class="nav__item"><a href="structural-integration.html" class="nav__link">Structural Integration</a></li>
                             <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                             <a href="tel:619-206-6180" class="btn btn--nav" role="button">
                                 (619) 206-6180
@@ -192,14 +195,13 @@
             <section class="rolfing mt-10 mt-md-15 mt-lg-20">
                 <div class="row g-0">
                     <div class="col-md-12 col-lg-6 rolfing__imgWrapper">
-                        <img src="./app/assets/img/home/rolfing-1.png" alt="Rolfing's image" class="img-fluid card-animate" loading="lazy">
+                        <img src="./app/assets/img/home/rolfing-1.png" alt="Rolfing's image" class="img-fluid" loading="lazy">
                     </div>
                     <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-around px-2 px-md-4 px-lg-7 rolfing__rightContainer">
                         <div class="row g-0 d-flex align-items-center justify-content-center animate-fade-in-up">
                             <div class="col-lg-5">
-                                <h2 class="text-center text-white count-digit" data-val="12">12
-                                    <span class="count-digit-suffix">+</span>
-                                </h2>
+                                <h2 class="text-center text-white count" data-val="12">0</h2>
+                                <!-- <span class="count-digit-suffix">+</span> -->
                             </div>
                             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center mt-md-1 mt-lg-0">                  
                                 <span class="text-white rolfing__desc">
@@ -209,10 +211,8 @@
                         </div>
                         <div class="row g-0 d-flex align-items-center justify-content-center animate-fade-in-up">
                             <div class="col-lg-5">
-                                <h2 class="text-center text-white" data-val="43">
-                                    43
-                                    <span class="count-digit-suffix">+</span>
-                                </h2>
+                                <h2 class="text-center text-white count" data-val="43">0</h2>
+                                <!-- <span class="count-digit-suffix">+</span> -->
                             </div>
                             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center">                  
                                 <span class="text-white rolfing__desc d-flex align-items-center justify-content-center">
@@ -222,10 +222,8 @@
                         </div>
                         <div class="row g-0 d-flex align-items-center justify-content-center animate-fade-in-up">
                             <div class="col-lg-5">
-                                <h2 class="text-center text-white" data-val="43">
-                                    43
-                                    <span class="count-digit-suffix">+</span>
-                                </h2>
+                                <h2 class="text-center text-white count" data-val="75">0</h2>
+                                <!-- <span class="count-digit-suffix">+</span> -->
                             </div>
                             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center">                  
                                 <span class="text-white rolfing__desc">
@@ -358,77 +356,82 @@
 
              <!-- FAQ start -->
              <section class="FAQs mt-10 mt-lg-15">
-                <div class="page-container">
-                    <div class="row g-0">
-                        <div class="col-sm-12 col-md-6">
-                            <h4 class="text-white text-uppercase animate-fade-in">
-                                FAQ<span class="text-lowercase">s</span>
-                            </h4>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="accordian animate-fade-in-up">
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle1">
-                                    <label for="toggle1" class="accordian__label">
-                                        Benefits of Structural Integration-1
-                                    </label>
-                                     <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p> 
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>                                 
+                <div class="FAQs__top">
+                    <img src="./app/assets/img/home/bg.webp" alt="" class="img-fluid ">
+                </div>
+                <div class="FAQs__bottom ">
+                    <div class="page-container">
+                        <div class="row g-0">
+                            <div class="col-sm-12 col-md-6">
+                                <h4 class="text-white text-uppercase animate-fade-in">
+                                    FAQ<span class="text-lowercase">s</span>
+                                </h4>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="accordian animate-fade-in-up">
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle1">
+                                        <label for="toggle1" class="accordian__label">
+                                            Benefits of Structural Integration-1
+                                        </label>
+                                         <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p> 
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>                                 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle2">
-                                    <label for="toggle2" class="accordian__label">
-                                        Benefits of Structural Integration-2
-                                    </label>
-                                    <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p>
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>  
-                                     
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle2">
+                                        <label for="toggle2" class="accordian__label">
+                                            Benefits of Structural Integration-2
+                                        </label>
+                                        <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p>
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>  
+                                         
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle4">
-                                    <label for="toggle4" class="accordian__label">
-                                        Benefits of Structural Integration-3
-                                    </label>                           
-                                    <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p>
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>                                     
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle4">
+                                        <label for="toggle4" class="accordian__label">
+                                            Benefits of Structural Integration-3
+                                        </label>                           
+                                        <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p>
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>                                     
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordian__tab">
-                                    <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle3">
-                                    <label for="toggle3" class="accordian__label">
-                                        Benefits of Structural Integration-4
-                                    </label>
-                                    <div class="accordian__divider"></div>
-                                    <div class="accordian__content">
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
-                                        </p>
-                                        <p class="m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
-                                        </p>  
+                                    <div class="accordian__tab">
+                                        <input type="checkbox" class="accordian__toggle" name="toggle" id="toggle3">
+                                        <label for="toggle3" class="accordian__label">
+                                            Benefits of Structural Integration-4
+                                        </label>
+                                        <div class="accordian__divider"></div>
+                                        <div class="accordian__content">
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia nihil, blanditiis recusandae laborum fugit? Nisi consectetur laboriosam nostrum molestias! Fugiat pariatur quisquam rem, maxime suscipit accusamus vero ut non.
+                                            </p>
+                                            <p class="m-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae distinctio sunt deserunt a, porro ipsa fugiat architecto nam illo!
+                                            </p>  
+                                        </div>
                                     </div>
-                                </div>
-                            </div>                        
+                                </div>                        
+                            </div>
                         </div>
                     </div>
                 </div>
