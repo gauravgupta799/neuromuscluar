@@ -278,18 +278,6 @@
 }
 
 .FAQs{
-    // background-image: url("../../../app/assets/img/home/retirementdcare_hero.webp");
-    // @include background-cover;
-    // background-position: center top;
-    // padding: em(200) em(0) em(140) em(0);
-
-    // @include breakpoint-md{
-    //     padding: em(240) em(0) em(190) em(0);
-    // }
-    // @include breakpoint-md{
-    //     padding: em(280) em(0) em(240) em(0);
-    // }
-
     &__summary{
         font-size: rem(20);
         font-weight: bold;
@@ -368,3 +356,15 @@
     @include transition(all, 0.4s);
 }
 // Accordian end
+
+
+.count{
+    position:relative;
+}
+.count::after{
+    content:"+";
+    position:absolute;
+    top: 0;
+    // color:white;
+    font-size: rem(48);
+}

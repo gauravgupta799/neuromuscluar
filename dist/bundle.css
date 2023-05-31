@@ -12104,6 +12104,17 @@ button.disable[type=submit] {
   transition: all 0.4s ease;
 }
 
+.count {
+  position: relative;
+}
+
+.count::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  font-size: 3rem;
+}
+
 .about--hero {
   background-image: url("../../../app//assets/img/about/hero-brisk-walk-stock.webp");
   background-repeat: no-repeat;
@@ -12519,6 +12530,133 @@ button.disable[type=submit] {
   }
 }
 
+.sessions {
+  margin-top: 7.5rem;
+}
+@media only screen and (min-width: 48em) {
+  .sessions {
+    margin-top: 9.375rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .sessions {
+    margin-top: 11.25rem;
+  }
+}
+.sessions__container--desktop {
+  display: none !important;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__container--desktop {
+    display: flex !important;
+  }
+}
+.sessions__tab {
+  opacity: 0.4;
+  transition: all 0.3s ease-in-out;
+}
+.sessions__tab .h-line {
+  margin-block: 1.5625rem;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__tab .h-line {
+    margin-block: 2.8125rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .sessions__tab .h-line {
+    margin-block: 4.0625rem;
+  }
+}
+.sessions__tab:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.sessions__tab.active {
+  opacity: 1;
+}
+.sessions__content--desktop {
+  margin-bottom: 2.5rem;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__content--desktop {
+    margin-bottom: 3.75rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .sessions__content--desktop {
+    margin-bottom: 5rem;
+  }
+}
+.sessions__content--desktop .content-heading {
+  font-family: "FutuBK";
+}
+.sessions__container--mobile {
+  margin-top: 3.125rem;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__container--mobile {
+    display: none;
+  }
+}
+.sessions__container--mobile .content-heading {
+  font-family: "FutuBK";
+}
+.sessions__container--mobile p {
+  margin-bottom: 1.25rem;
+}
+.sessions__tabs {
+  padding-block: 0.3125rem;
+}
+.sessions__tabWrapper, .sessions__contentWrapper {
+  margin-top: 2.5rem !important;
+}
+@media only screen and (min-width: 48em) {
+  .sessions__tabWrapper, .sessions__contentWrapper {
+    margin-top: 0 !important;
+  }
+}
+.sessions__label {
+  font-size: 1.5rem;
+  font-family: "Unbounded";
+  position: relative;
+  display: flex;
+  padding-block: 0.3125em;
+  cursor: pointer;
+}
+.sessions__label::after {
+  content: "\f078";
+  font-family: "fontawesome";
+  position: absolute;
+  right: 0.875rem;
+  transition: transform 0.4s ease;
+}
+.sessions__desWrapper {
+  margin-top: 1.25rem;
+}
+.sessions__content {
+  max-height: 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  color: #000;
+}
+.sessions__divider {
+  height: 1px;
+  background-color: #000;
+}
+.sessions__toggle {
+  display: none;
+}
+
+.sessions__toggle:checked ~ .sessions__content {
+  max-height: 100vh;
+}
+
+.sessions__toggle:checked ~ .sessions__label::after {
+  transform: rotate(180deg);
+  transition: all 0.4s ease;
+}
+
 .img-wrapper {
   position: relative;
   height: 100%;
@@ -12734,68 +12872,6 @@ button.disable[type=submit] {
   position: relative;
 }
 
-.sessions {
-  margin-top: 7.5rem;
-}
-@media only screen and (min-width: 48em) {
-  .sessions {
-    margin-top: 9.375rem;
-  }
-}
-@media only screen and (min-width: 48em) {
-  .sessions {
-    margin-top: 11.25rem;
-  }
-}
-.sessions__tabWrapper, .sessions__contentWrapper {
-  margin-top: 2.5rem !important;
-}
-@media only screen and (min-width: 48em) {
-  .sessions__tabWrapper, .sessions__contentWrapper {
-    margin-top: 0 !important;
-  }
-}
-.sessions__tab {
-  opacity: 0.4;
-  transition: all 0.3s ease-in-out;
-}
-.sessions__tab .h-line {
-  margin-block: 1.5625rem;
-}
-@media only screen and (min-width: 48em) {
-  .sessions__tab .h-line {
-    margin-block: 2.8125rem;
-  }
-}
-@media only screen and (min-width: 62em) {
-  .sessions__tab .h-line {
-    margin-block: 4.0625rem;
-  }
-}
-.sessions__tab:hover {
-  cursor: pointer;
-  opacity: 1;
-}
-.sessions__tab.active {
-  opacity: 1;
-}
-.sessions__content {
-  margin-bottom: 2.5rem;
-}
-@media only screen and (min-width: 48em) {
-  .sessions__content {
-    margin-bottom: 3.75rem;
-  }
-}
-@media only screen and (min-width: 48em) {
-  .sessions__content {
-    margin-bottom: 5rem;
-  }
-}
-.sessions__content .content-heading {
-  font-family: "FutuBK";
-}
-
 .check_wrapper {
   width: 3rem;
   height: 3rem;
@@ -12927,7 +13003,7 @@ button.disable[type=submit] {
   align-items: center;
   flex-direction: column;
   gap: 2.5rem;
-  margin-top: 15%;
+  margin-top: 6%;
 }
 .header-wrapper--mobile .nav__item {
   font-size: 1.125rem;

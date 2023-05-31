@@ -11,63 +11,63 @@
     position: relative;
 }
 
-.sessions{
-    margin-top: rem(120);
+// .sessions{
+//     margin-top: rem(120);
 
-    @include breakpoint-md{
-        margin-top: rem(150);
-    }
-    @include breakpoint-md{
-        margin-top: rem(180);
-    }
+//     @include breakpoint-md{
+//         margin-top: rem(150);
+//     }
+//     @include breakpoint-md{
+//         margin-top: rem(180);
+//     }
 
-    &__tabWrapper , &__contentWrapper{
-       margin-top: rem(40) !important;
+//     &__tabWrapper , &__contentWrapper{
+//        margin-top: rem(40) !important;
 
-       @include breakpoint-md{
-            margin-top:0 !important;
-        }
-    }
+//        @include breakpoint-md{
+//             margin-top:0 !important;
+//         }
+//     }
 
-    &__tab{
-        opacity: 0.4;
-        @include transition(all, 0.3s, ease-in-out);
+//     &__tab{
+//         opacity: 0.4;
+//         @include transition(all, 0.3s, ease-in-out);
 
-        .h-line{
-            margin-block: rem(25);
+//         .h-line{
+//             margin-block: rem(25);
 
-            @include breakpoint-md{
-                margin-block: rem(45);
-            }
-            @include breakpoint-lg{
-                margin-block: rem(65);
-            }
-        }
+//             @include breakpoint-md{
+//                 margin-block: rem(45);
+//             }
+//             @include breakpoint-lg{
+//                 margin-block: rem(65);
+//             }
+//         }
 
-        &:hover{
-            cursor: pointer;
-            opacity: 1;
-        }
-        &.active{
-            opacity: 1;
-        }
-    }
+//         &:hover{
+//             cursor: pointer;
+//             opacity: 1;
+//         }
+//         &.active{
+//             opacity: 1;
+//         }
+//     }
 
-    &__content{
-        margin-bottom: rem(40);
+//     &__content{
+//         margin-bottom: rem(40);
 
-        @include breakpoint-md{
-            margin-bottom: rem(60);
-        }
-        @include breakpoint-md{
-            margin-bottom: rem(80);
-        }
+//         @include breakpoint-md{
+//             margin-bottom: rem(60);
+//         }
+//         @include breakpoint-md{
+//             margin-bottom: rem(80);
+//         }
 
-        .content-heading{
-            font-family:"FutuBK";
-        }
-    }
-}
+//         .content-heading{
+//             font-family:"FutuBK";
+//         }
+//     }
+// }
 
 .check_wrapper{
     width: rem(48);

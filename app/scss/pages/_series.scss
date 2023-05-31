@@ -1,0 +1,132 @@
+@use "../abstract/fonts";
+@use "../abstract/colors" as *;
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+
+.sessions{
+    margin-top: rem(120);
+
+    @include breakpoint-md{
+        margin-top: rem(150);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(180);
+    }
+    &__container--desktop{
+        display: none !important;
+
+        @include breakpoint-md{
+            display: flex !important;
+        }
+    }
+
+    &__tab{
+        opacity: 0.4;
+        @include transition(all, 0.3s, ease-in-out);
+
+        .h-line{
+            margin-block: rem(25);
+
+            @include breakpoint-md{
+                margin-block: rem(45);
+            }
+            @include breakpoint-lg{
+                margin-block: rem(65);
+            }
+        }
+
+        &:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        &.active{
+            opacity: 1;
+        }
+    }
+
+    &__content--desktop{
+        margin-bottom: rem(40);
+
+        @include breakpoint-md{
+            margin-bottom: rem(60);
+        }
+        @include breakpoint-md{
+            margin-bottom: rem(80);
+        }
+
+        .content-heading{
+            font-family:"FutuBK";
+        }
+    }
+
+
+    &__container--mobile{
+        margin-top: rem(50);
+        @include breakpoint-md{
+           display: none;
+        }
+        .content-heading{
+            font-family:"FutuBK";
+        }
+
+        p{
+            margin-bottom: rem(20);
+        }
+    }
+    &__tabs{
+        padding-block: rem(5);
+    }
+
+    &__tabWrapper , &__contentWrapper{
+       margin-top: rem(40) !important;
+
+       @include breakpoint-md{
+            margin-top:0 !important;
+        }
+    }
+
+    &__label{
+        font-size:rem(24); 
+        font-family:"Unbounded";
+        position:relative;
+        display: flex;
+        padding-block: em(5);
+        cursor: pointer;
+
+        &::after{
+            content:"\f078";
+            font-family: "fontawesome";
+            position:absolute;
+            right: rem(14);
+            @include transition(transform, 0.4s);
+        }
+    }
+    &__desWrapper{
+        margin-top: rem(20);
+    }
+
+    &__content{
+        max-height: 0;
+        @include transition(all, 0.4s, ease-in-out);
+        overflow: hidden;
+        color:$clr-black;
+    }
+    &__divider{
+        height: 1px;
+        background-color: $clr-black;
+    }
+    &__toggle{
+        display: none;
+    }
+}
+
+.sessions__toggle:checked ~ .sessions__content{
+    max-height: 100vh;
+}
+.sessions__toggle:checked ~ .sessions__label::after{
+    transform:rotate(180deg);
+    @include transition(all, 0.4s);
+}
+// sessions end
