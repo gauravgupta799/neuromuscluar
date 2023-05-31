@@ -65,24 +65,25 @@ if(playBtn != null && pauseBtn != null){
 const nums = document.querySelectorAll(".count");
 const statsSection = document.querySelector(".rolfing");
 let started = false;
-
-window.addEventListener("scroll", () => {
-  if(window.scrollY >= statsSection.offsetTop){
-    if(!started){
-      nums.forEach((num) =>startCounter(num));
+if(nums != null && statsSection != null){
+  window.addEventListener("scroll", () => {
+    if(window.scrollY >= statsSection.offsetTop){
+      if(!started){
+        nums.forEach((num) =>startCounter(num));
+      }
+      started = true;
     }
-    started = true;
+  })
+  
+  function startCounter(el){
+    let goal = el.dataset.val;
+    let count = setInterval(() =>{
+    let elem = el.textContent++;
+      if(elem == goal) {
+        clearInterval(count);
+      }
+    },2000/goal);
   }
-})
-
-function startCounter(el){
-  let goal = el.dataset.val;
-  let count = setInterval(() =>{
-  let elem = el.textContent++;
-    if(elem == goal) {
-      clearInterval(count);
-    }
-  },2000/goal);
 }
 //====== Counter end ======
 
@@ -197,6 +198,7 @@ cardContainers.forEach((item, i) => {
 
 
 //====== Gallary start ======
+$(document).ready(function () {
 $(".img-wrapper").hover(
   function(){
     $(this).find(".img-overlay").animate({ opacity: 0.5}, 600);
@@ -283,5 +285,5 @@ $exitButton.click(function() {
   // Fade out the overlay
   $("#overlay").fadeOut("slow");
 });
-
+});
 //====== Gallary end ======

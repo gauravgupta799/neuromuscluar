@@ -12701,12 +12701,12 @@ button.disable[type=submit] {
      object-fit: contain;
   padding: 5%;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   #overlay img {
     width: 60%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 80.75em) {
   #overlay img {
     width: 50%;
   }
@@ -12725,11 +12725,11 @@ button.disable[type=submit] {
   opacity: 0.7;
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   #nextButton,
   #prevButton,
   #exitButton {
-    font-size: 2.3em;
+    font-size: 2em;
   }
 }
 
@@ -12737,15 +12737,6 @@ button.disable[type=submit] {
   position: absolute;
   top: 15px;
   right: 15px;
-}
-#exitButton:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  #exitButton {
-    font-size: 2.5em;
-  }
 }
 
 .session {
