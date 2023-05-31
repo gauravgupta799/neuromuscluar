@@ -307,14 +307,20 @@
         display: flex;
         padding-block: em(30);
         cursor: pointer;
+        @include flex-center-vertical;
+        justify-content: space-between;
 
-        &::after{
-            content:"\f078";
-            font-family: "fontawesome";
-            position:absolute;
-            right: rem(14);
+        .chevron{
             @include transition(transform, 0.4s);
         }
+
+        // &::after{
+        //     content:"\f078";
+        //     font-family: "fontawesome";
+        //     position:absolute;
+        //     right: rem(14);
+        //     @include transition(transform, 0.4s);
+        // }
     }
     &__content{
         max-height: 0;
@@ -351,7 +357,7 @@
 .accordian__toggle:checked ~ .accordian__content{
     max-height: 100vh;
 }
-.accordian__toggle:checked ~ .accordian__label::after{
+.accordian__toggle:checked ~ .accordian__label > .chevron{
     transform:rotate(180deg);
     @include transition(all, 0.4s);
 }
@@ -365,6 +371,5 @@
     content:"+";
     position:absolute;
     top: 0;
-    // color:white;
     font-size: rem(48);
 }

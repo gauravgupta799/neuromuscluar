@@ -2,9 +2,9 @@
 
 
 .swiper-button-next, .swiper-button-prev{
-    position: static;
+    position: static !important;
     top: 0 !important;
     margin: 0 !important;
     z-index: none !important;
-    color:$clr-secondary;
+    color:$clr-secondary !important;
 }

@@ -9,14 +9,19 @@ const rename = require('gulp-rename');
 const browsersync = require('browser-sync').create();
 
 // const cssFiles = [
-//     'app/scss/style.scss',
+//     'app/scss/main.scss',
 //     'app/vendors/swiper/css/swiper.css',
 //     'app/vendors/fontawesome-free-6.2.0-web/css/all.css',
 // ];
 
+const cssFiles = [
+    'app/scss/main.scss',
+    'app/vendors/swiper/css/swiper.css',
+];
+
 //sass task for style css
 function scssTask(){
-    return src("app/scss/main.scss", {sourcemaps:true})
+    return src(cssFiles , {sourcemaps:true})
     .pipe(sass())
     .pipe(concat('bundle.css'))
     .pipe(postcss([autoprefixer()]))
@@ -25,7 +30,7 @@ function scssTask(){
 
 //sass task minified style css
 function scssTaskMinified(){
-    return src("app/scss/main.scss", {sourcemaps:true})
+    return src(cssFiles , {sourcemaps:true})
     .pipe(sass())
     .pipe(concat('bundle.css'))
     .pipe(postcss([autoprefixer, cssnano()]))
@@ -33,21 +38,15 @@ function scssTaskMinified(){
     .pipe(dest('dist', {sourcemaps: '.'}))
 }
 
-// const jsFiles = [
-//     'asset/vendors/jquery-3.6.1/jquery-3.6.1.min.js',
-//     'asset/vendors/gsap/gsap.min.js',
-//     'asset/vendors/gsap/scrollTrigger.min.js',
-//     'asset/vendors/swiper/js/swiper-bundle.min.js', 
-//     'asset/js/main.js'
-// ]
 
+// Array of javscript files
 const jsFilesArray = [
+    "app/vendors/jquery/jquery-3.7.0.min.js",
     "app/vendors/gsap/gsap.min.js",
     "app/vendors/gsap/ScrollTrigger.min.js",
     "app/vendors/swiper/js/swiper-bundle.min.js",
     "app/js/main.js",
 ]
-
 
 // javascript task
 function jsTask(){

@@ -78,47 +78,12 @@ window.addEventListener("scroll", () => {
 function startCounter(el){
   let goal = el.dataset.val;
   let count = setInterval(() =>{
-    let elem = el.textContent++;
-    // el.innerText = `${elem}+`
+  let elem = el.textContent++;
     if(elem == goal) {
       clearInterval(count);
     }
   },2000/goal);
 }
-
-// let arr = Array.from(count);
-
-// arr.map(function(item){
-//   let startNum = 0;
-//   let stop;
-//   function counterUp(){
-//     startNum++;
-//     item.innerHTML = `${startNum}+`;
-//     if(startNum == item.dataset.val){
-//       clearInterval(stop);
-//     }
-//   }
-
-//   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-//     stop = setInterval(()=>{
-//       counterUp();
-//     }, 50);
-//   }
-// })
-
-
-
-// let counterNum = 0;
-// function updateCounteringNum(){
-//   counterNum++;
-//   counter.textContent = counterNum;
-// }
-// function handleScroll(){
-//   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-//     updateCounteringNum();
-//   }
-// }
-// window.addEventListener('scroll', handleScroll);
 //====== Counter end ======
 
 
@@ -209,7 +174,6 @@ textContainers.forEach((item, i) => {
   });
 });
 
-
 // card-fade-in-up
 const cardContainers = gsap.utils.toArray(".card-animate");
 cardContainers.forEach((item, i) => {
@@ -232,12 +196,10 @@ cardContainers.forEach((item, i) => {
 //====== Animation end ======
 
 
-//====== Gallary Image start ======
-
-// hover an image
+//====== Gallary start ======
 $(".img-wrapper").hover(
   function(){
-    $(this).find(".img-overlay").animate({ opacity: 1}, 600);
+    $(this).find(".img-overlay").animate({ opacity: 0.5}, 600);
   }, 
   function(){
     $(this).find(".img-overlay").animate({ opacity:0}, 600);
@@ -282,11 +244,8 @@ $nextButton.click(function(event) {
   $("#overlay img").hide();
   // Overlay image location
   var $currentImgSrc = $("#overlay img").attr("src");
-  console.log($currentImgSrc)
   // Image with matching location of the overlay image
   var $currentImg = $('.gallary--img img[src="' + $currentImgSrc + '"]');
-  // var $currentImg = $(`.gallary--img img[src=" ${$currentImgSrc} "]`);
-  console.log($currentImg)
   // Finds the next image
   var $nextImg = $($currentImg.closest(".image").next().find("img"));
   // All of the images in the gallery
@@ -324,3 +283,5 @@ $exitButton.click(function() {
   // Fade out the overlay
   $("#overlay").fadeOut("slow");
 });
+
+//====== Gallary end ======
