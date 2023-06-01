@@ -8,41 +8,41 @@
 .popup--main{
     margin-block: 4rem;
 }
-// .popup--container{
-//     margin-inline: rem(187);
-// }
 .img-mask{
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
   z-index:99999;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.6);
   opacity: 0;
   visibility: hidden;
+  backdrop-filter:blur(3px);
+  transform:scale(0);
+  @include transition(all, 0.5s, ease-out);
+
+  &.is-open{
+    opacity: 1;
+    visibility: visible;
+     transform:scale(1);
+  }
 }
 
 .popup{
         position: fixed;
-        top: 16%;
         left: 0;
         right: 0;
+        top: 30px;
         z-index:999999;
-        // opacity: 0;
-        // visibility: hidden;
-        display: none;
-        @include transition(all, 0.5s ease-in-out);
         border:1px solid $clr-black;
         background-color: $clr-white;
         width: rem(995);
         max-width: 90%;
         margin: 0 auto;
-        // position:relative;
+        // transform:translateY(-150%);
+        transform:scale(0);
+        @include transition(all, 0.8s, ease-out);
 
-    &.is-modal-open{
-        opacity: 1;
-        visibility: visible;
-    }
     &__cancel{
         width: rem(30);
         height: rem(30);
@@ -52,7 +52,7 @@
         position: absolute;
         top: -12px;
         right: -12px;
-        @include transition(all, 0.4s, ease-in-out);
+        @include transition(all, 0.8s, ease-out);
 
         &:hover{
             cursor:pointer;
@@ -70,6 +70,12 @@
         }
         @include breakpoint-lg{
             padding: em(40) em(112) em(80) em(62) !important;
+        }
+    }
+    &__talk-to-btn{
+        border:2px solid $clr-primary;
+        &:hover{
+            color:$clr-primary;
         }
     }
 }
@@ -105,32 +111,9 @@
     }
 }
 
-// .small-img{
-//     @include transition(all, 0.5s, ease-in);
-// }
-
-// .small-img:hover{
-//     cursor: pointer;
-//     transform:scale(1.02);
-//     -webkit-transform:scale(1.02);
-//     -moz-transform:scale(1.02);
-//     -ms-transform:scale(1.02);
-//     -o-transform:scale(1.02);
-// }
-
-// .popup.is-open{
-//     opacity: 1;
-//     visibility: visible;
-// }
-
-
-
- // &__card{
-    //     border:1px solid $clr-black;
-    //     background-color: $clr-white;
-    //     width: rem(995);
-    //     max-width:calc(100% - 100px);
-    //     height: rem(562);
-    //     margin: 0 auto;
-    //     position:relative;
-    // }
+.large-image{
+    display: none;
+    @include breakpoint-md{
+        display: block;
+    }
+}

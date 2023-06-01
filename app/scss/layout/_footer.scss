@@ -4,15 +4,11 @@
 @use "../abstract/mixins" as *;
 
 .footer{
-    // padding-top: em(70);
-    // padding-bottom: em(60);
     padding-top: em(50);
     padding-bottom: em(40);
     background-color: $clr-primary;
 
     @include breakpoint-md{
-        // padding-top: em(90);
-        // padding-bottom: em(80);
         padding-top: em(80);
         padding-bottom: em(60);
     }
@@ -104,6 +100,7 @@
         &:hover{
             background:$clr-secondary;
             cursor:pointer;
+            transform:scale(1.02);
 
             .social__svg-path{
                 fill:$clr-white;

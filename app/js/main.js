@@ -85,6 +85,31 @@ if(nums != null && statsSection != null){
     },2000/goal);
   }
 }
+
+// Louie Counter
+// const counter = document.querySelectorAll(".louie-counter__heading");
+// const counterSection = document.querySelector(".louie-counter");
+
+// if( counter != null && counterSection != null){
+//   window.addEventListener("scroll", () => {
+//     if(window.scrollY >= counterSection.offsetTop){
+//       if(!started){
+//         counter.forEach((num) =>startCount(num));
+//       }
+//       started = true;
+//     }
+//   })
+  
+//   function startCount(el){
+//     let max = el.dataset.max;
+//     let count = setInterval(() =>{
+//     let elem = el.textContent++;
+//       if(elem == max) {
+//         clearInterval(count);
+//       }
+//     },2000/goal);
+//   }
+// }
 //====== Counter end ======
 
 
@@ -159,8 +184,7 @@ fadeIn.forEach((mainContent, i) => {
 // animate fade in up
 const textContainers = gsap.utils.toArray(".animate-fade-in-up");
 textContainers.forEach((item, i) => {
-  const anim = gsap.fromTo(
-    item,
+  const anim = gsap.fromTo(item,
     { opacity: 0, y: "15%" },
     { duration: 0.8, opacity: 1, y: 0 }
   );
@@ -198,6 +222,28 @@ cardContainers.forEach((item, i) => {
 
 
 //====== Gallery start ======
+const popup = document.querySelector(".popup");
+if(popup != null) {
+  window.addEventListener("load", ()=>{
+    setTimeout(()=>{
+      // popup.style.display= "block"
+      // popup.style.transform = "translateY(0)";
+      popup.style.transform = "scale(1)";
+      document.querySelector(".img-mask").classList.add("is-open");
+    }, 2000);
+  })
+
+  const cancelBtn = document.querySelector(".popup__cancel");
+  cancelBtn.addEventListener("click", () => {
+    // popup.style.transform = "translateY(-150%)";
+    popup.style.transform = "scale(0)";
+    document.querySelector(".img-mask").classList.remove("is-open");
+  })
+}
+
+
+
+
 $(document).ready(function () {
 $(".img-wrapper").hover(
   function(){

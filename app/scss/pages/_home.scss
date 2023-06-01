@@ -156,7 +156,6 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-
     &__imgWrapper{
         img{
             display: block;
@@ -168,7 +167,6 @@
             }
         }
     }
-
     &__rightContainer{
         background-color: $clr-primary;
         row-gap:em(48);
@@ -204,7 +202,6 @@
     &__thumbnail-wrapper{
         @include flex-center;
         flex-direction: column;
-
         @include breakpoint-lg{
             flex-direction: row;
             column-gap: 2.5rem;
@@ -216,7 +213,6 @@
     &__name-wrapper{
         @include flex-column;
         align-items: flex-start;
-
     }
     &__patient-name{
         font-family:"Unbounded";
@@ -224,7 +220,6 @@
     &__desc{
         font-size: rem(20);
     }
-
     &__thumbnail{
       width: rem(105);
       height: rem(105);
@@ -240,7 +235,6 @@
         width: rem(150);
         height: rem(150);
       }
-
     }
 }
 
@@ -292,7 +286,6 @@
         font-size: rem(20);
         font-weight: bold;
     }
-
     &__bottom{
         background-color: $clr-primary;
         padding: em(85) em(0) em(130) em(0);
@@ -314,23 +307,19 @@
         font-family:"Unbounded bold";
         font-weight: 800 !important;
         position:relative;
-        display: flex;
         padding-block: em(30);
         cursor: pointer;
         @include flex-center-vertical;
         justify-content: space-between;
+        @include transition(all, 0.4s, ease-in);
+
+        // &:hover{
+        //     color:$clr-secondary;
+        // }
 
         .chevron{
             @include transition(transform, 0.4s);
         }
-
-        // &::after{
-        //     content:"\f078";
-        //     font-family: "fontawesome";
-        //     position:absolute;
-        //     right: rem(14);
-        //     @include transition(transform, 0.4s);
-        // }
     }
     &__content{
         max-height: 0;
@@ -348,19 +337,6 @@
     }
     &__toggle{
         display: none;
-
-        // &:checked{
-
-        //     .accordian__content {
-        //         max-height: 100vh;
-        //     }
-
-        //     .accordian__label::after{
-        //         transform:rotate(180deg);
-        //         @include transition(all, 0.4s);
-        //     }
-
-        // }
     }
 }
 

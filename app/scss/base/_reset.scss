@@ -96,3 +96,7 @@ button{
   font-family:"FutuBK";
   color:$clr-black !important;
 }
+*::selection{
+  color:$clr-white;
+  background-color: $clr-primary;
+}

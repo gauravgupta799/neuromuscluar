@@ -64,7 +64,6 @@
         background: transparent;
         resize:none;
     }
-
     &__radio-wrapper{
         @include flex-center;  
         margin-top: rem(20) !important;
@@ -74,7 +73,9 @@
         }
     }
 }
-
+input, textarea{
+    caret-color: $clr-secondary;
+}
 
 input[type="radio"] {
     display: none;

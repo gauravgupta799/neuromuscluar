@@ -44,10 +44,10 @@
     @include breakpoint-lg{
         margin-top: rem(230);
     }
-
     &__heading{
         font-size: rem(56) !important;
         margin-top: rem(30);
+        position:relative;
 
         @include breakpoint-sm{
             font-size: rem(72) !important;
@@ -57,8 +57,12 @@
             font-size: rem(88) !important;
             margin-top: rem(50);
         }
+        &::after{
+            content: "+";
+            position: absolute;
+            top: 0;
+        }
     }
-
     &__para{
         padding-inline:em(20);
         text-align: center;

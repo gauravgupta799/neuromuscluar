@@ -21,9 +21,14 @@
 .img-wrapper{
     position: relative;
     height: 100%;
+
+    // img{
+    //   transition: all .45s cubic-bezier(.165,.84,.44,1);
+    // }
 }
 .img-wrapper:hover{
-    cursor: pointer;
+    // transform:scale(1.1);
+   cursor: pointer;
 }
 
 .img-overlay {

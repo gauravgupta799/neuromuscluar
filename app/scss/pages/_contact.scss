@@ -8,7 +8,6 @@
     background-image: url("../../../app//assets/img/contact/Depositphotos_hero.webp");
     @include background-cover;
     background-position: center bottom;
-    // position: relative;
 }
 
 .contact{
@@ -23,11 +22,9 @@
     @include breakpoint-lg{
         margin-top: rem(225);
     }
-
     &__wrapper--form{
         margin-top: rem(40) !important;
     }
-
     &__heading{
         margin-top: 40px;
         @include breakpoint-sm{
@@ -54,7 +51,6 @@
         padding-top: em(200);
         padding-bottom: em(100);
     }
-
     &__wrapper{
         margin-top: rem(48) !important;
 
@@ -62,7 +58,6 @@
             margin-top: 0 !important;
         }
     }
-
     &__icon-box{
         width: rem(65);
         height: rem(65);
@@ -110,7 +105,6 @@
             }
         }
     }
-
     &__item{
         display:inline-block;
         margin-top: rem(33);
@@ -124,12 +118,10 @@
     &__address{
         padding-inline: rem(70);
     }
-
 }
 
 .map{
     height: 607px;
-
     &__google-map{
         height: 100%;
     }

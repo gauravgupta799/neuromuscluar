@@ -8,7 +8,6 @@
 .typical--hero{
 
 }
-
 .session{
     margin-top: rem(120);
 
@@ -67,9 +66,9 @@
     }
 
     &__contents{
-        margin-top: rem(60) !important;
+        margin-top: rem(44) !important;
         @include breakpoint-md{
-            margin-top: rem(90) !important;
+            margin-top: rem(84) !important;
         }
         @include breakpoint-lg{
             margin-top: rem(120) !important;

@@ -31,14 +31,12 @@
             text-align: left;
         }
     }
-
     &__heading{
         margin-top: rem(30);
         @include breakpoint-sm{
             margin-top:0;
         }
     }
-
     &__desc{
         line-height: 1.57;
         text-align: left;
@@ -64,7 +62,6 @@
     background-image: url("../../../app//assets/img/about/quote-bg.svg");
     @include background-cover;
     background-position: center top;
-    // height: rem(360);
     padding: em(83) em(16) em(32);
 
     @include breakpoint-sm{
@@ -92,7 +89,6 @@
 
 .steps-neuro{
     // position:relative;
-
     &__step{
         width: rem(90);
         height: rem(90);

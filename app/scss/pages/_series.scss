@@ -61,7 +61,6 @@
         }
     }
 
-
     &__container--mobile{
         margin-top: rem(50);
         @include breakpoint-md{
@@ -97,13 +96,9 @@
         justify-content:space-between;
         @include transition(all, 0.4s);
 
-        // &::after{
-        //     content:"\f078";
-        //     font-family: "fontawesome";
-        //     position:absolute;
-        //     right: rem(14);
-        //     @include transition(transform, 0.4s);
-        // }
+        .chevron{
+            @include transition(transform, 0.4s);
+        }
     }
     &__desWrapper{
         margin-top: rem(20);
@@ -132,7 +127,6 @@
     @include transition(all, 0.4s);
 }
 // sessions end
-
 
 .ctn-btn--series{
     margin-top: rem(48);
