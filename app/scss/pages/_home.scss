@@ -120,6 +120,16 @@
             display: block;
         }
     }
+    &__btn{
+        margin-top: rem(50);
+
+        @include breakpoint-md{
+            margin-top: rem(70);
+        }   
+        @include breakpoint-lg{
+            margin-top: rem(100);
+        }   
+    }
 }
 
 .service{

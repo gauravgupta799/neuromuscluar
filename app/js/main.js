@@ -197,7 +197,7 @@ cardContainers.forEach((item, i) => {
 //====== Animation end ======
 
 
-//====== Gallary start ======
+//====== Gallery start ======
 $(document).ready(function () {
 $(".img-wrapper").hover(
   function(){
@@ -217,7 +217,7 @@ var $exitButton = $('<div id = "exitButton"><i class="fa fa-times"></i></div>');
 
 // Add Overlay
 $overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
-$(".gallary").append($overlay);
+$(".gallery").append($overlay);
 
 // Hide overlay on default
 $overlay.hide();
@@ -247,11 +247,11 @@ $nextButton.click(function(event) {
   // Overlay image location
   var $currentImgSrc = $("#overlay img").attr("src");
   // Image with matching location of the overlay image
-  var $currentImg = $('.gallary--img img[src="' + $currentImgSrc + '"]');
+  var $currentImg = $('.gallery--img img[src="' + $currentImgSrc + '"]');
   // Finds the next image
   var $nextImg = $($currentImg.closest(".image").next().find("img"));
   // All of the images in the gallery
-  var $images = $(".gallary--img img");
+  var $images = $(".gallery--img img");
   // If there is a next image
   if ($nextImg.length > 0) { 
     // Fade in the next image
@@ -271,7 +271,7 @@ $prevButton.click(function(event) {
   // Overlay image location
   var $currentImgSrc = $("#overlay img").attr("src");
   // Image with matching location of the overlay image
-  var $currentImg = $('.gallary--img img[src="' + $currentImgSrc + '"]');
+  var $currentImg = $('.gallery--img img[src="' + $currentImgSrc + '"]');
   // Finds the next image
   var $nextImg = $($currentImg.closest(".image").prev().find("img"));
   // Fade in the next image
@@ -286,4 +286,4 @@ $exitButton.click(function() {
   $("#overlay").fadeOut("slow");
 });
 });
-//====== Gallary end ======
+//====== Gallery end ======

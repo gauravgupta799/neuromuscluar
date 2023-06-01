@@ -5,8 +5,17 @@
 @use "../abstract/mixins" as *;
 
 
-.gallary{
+.gallery{
+  &--img{
+    margin-top: rem(48);
 
+    @include breakpoint-md{
+      margin-top: rem(80);
+    }
+    @include breakpoint-lg{
+      margin-top: rem(150);
+    }
+  }
 }
 
 .img-wrapper{

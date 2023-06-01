@@ -79,11 +79,11 @@
 }
 
 .steps__box{
-      position:relative;
-    margin-top: rem(90) !important;
+    position:relative;
+    margin-top: rem(45) !important;
 
     @include breakpoint-md{
-        margin-top: rem(120) !important;
+        margin-top: rem(90) !important;
     }
     @include breakpoint-lg{
         margin-top: rem(150) !important;

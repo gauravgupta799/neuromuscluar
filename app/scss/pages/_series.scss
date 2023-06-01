@@ -91,17 +91,19 @@
         font-size:rem(24); 
         font-family:"Unbounded";
         position:relative;
-        display: flex;
         padding-block: em(5);
         cursor: pointer;
+        @include flex-center;
+        justify-content:space-between;
+        @include transition(all, 0.4s);
 
-        &::after{
-            content:"\f078";
-            font-family: "fontawesome";
-            position:absolute;
-            right: rem(14);
-            @include transition(transform, 0.4s);
-        }
+        // &::after{
+        //     content:"\f078";
+        //     font-family: "fontawesome";
+        //     position:absolute;
+        //     right: rem(14);
+        //     @include transition(transform, 0.4s);
+        // }
     }
     &__desWrapper{
         margin-top: rem(20);
@@ -125,8 +127,17 @@
 .sessions__toggle:checked ~ .sessions__content{
     max-height: 100vh;
 }
-.sessions__toggle:checked ~ .sessions__label::after{
+.sessions__toggle:checked ~ .sessions__label > .chevron{
     transform:rotate(180deg);
     @include transition(all, 0.4s);
 }
 // sessions end
+
+
+.ctn-btn--series{
+    margin-top: rem(48);
+
+    @include breakpoint-lg{
+        margin-top: rem(90);
+    }
+}
