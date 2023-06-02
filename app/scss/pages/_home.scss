@@ -319,6 +319,14 @@
 
         .chevron{
             @include transition(transform, 0.4s);
+            display: flex;
+            align-self: baseline;
+            margin-top: 8px;
+
+            @include breakpoint-lg{
+                align-self:center;
+                margin-top: 0;
+            }
         }
     }
     &__content{
@@ -347,6 +355,11 @@
     transform:rotate(180deg);
     @include transition(all, 0.4s);
 }
+
+// .accordian__toggle:checked ~ .accordian__label::after{
+//     transform:rotate(180deg);
+//     @include transition(all, 0.4s);
+// }
 // Accordian end
 
 

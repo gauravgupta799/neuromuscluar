@@ -21,15 +21,18 @@
 .img-wrapper{
     position: relative;
     height: 100%;
+    @include transition(all, 0.3s, ease-in);
 
-    // img{
-    //   transition: all .45s cubic-bezier(.165,.84,.44,1);
-    // }
+    &:hover{
+      cursor: pointer;
+
+      img{
+        @include transition(all, 0.3s, ease-in);
+        transform: scale(1.03);
+      }
+    }
 }
-.img-wrapper:hover{
-    // transform:scale(1.1);
-   cursor: pointer;
-}
+
 
 .img-overlay {
     background: rgba(0,0,0,0.7);

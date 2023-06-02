@@ -12104,6 +12104,15 @@ button.disable[type=submit] {
 }
 .accordian__label .chevron {
   transition: transform 0.4s ease;
+  display: flex;
+  align-self: baseline;
+  margin-top: 8px;
+}
+@media only screen and (min-width: 62em) {
+  .accordian__label .chevron {
+    align-self: center;
+    margin-top: 0;
+  }
 }
 .accordian__content {
   max-height: 0;
@@ -12716,10 +12725,14 @@ button.disable[type=submit] {
 .img-wrapper {
   position: relative;
   height: 100%;
+  transition: all 0.3s ease-in;
 }
-
 .img-wrapper:hover {
   cursor: pointer;
+}
+.img-wrapper:hover img {
+  transition: all 0.3s ease-in;
+  transform: scale(1.03);
 }
 
 .img-overlay {
@@ -13098,6 +13111,10 @@ button.disable[type=submit] {
   justify-content: flex-end;
   cursor: pointer;
   margin-top: 10%;
+}
+
+.btn--mobile {
+  display: none;
 }
 
 .form__group {
@@ -13486,7 +13503,7 @@ input[type=radio]:checked + label::after {
 .footer__list {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 0.3rem;
 }
 @media only screen and (min-width: 48em) {
   .footer__list {
