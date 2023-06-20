@@ -193,7 +193,7 @@ textContainers.forEach((item, i) => {
     animation: anim,
     toggleActions: "play",
     once: true,
-    duration:0.8,
+    duration:0.6,
     stagger:0.1,
     ease: Power4.easeOut,
   });
