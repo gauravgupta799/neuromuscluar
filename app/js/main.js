@@ -116,7 +116,6 @@ if(nums != null && statsSection != null){
 //====== Testimonial Swiper start ======
 var swiper = new Swiper(".mySwiper",{
   slidesPerView:1,
-
   loop:true,
   navigation:{
       nextEl:".swiper-button-next",
